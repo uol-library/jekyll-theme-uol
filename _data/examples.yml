@@ -1,0 +1,33 @@
+widgets:
+  - type: content
+    title: Content Widget
+    lead: Content widgets can contain a mixture of text and image
+    content: |
+      The home page template has a different structure to standard pages and is made up entirely of widgets.
+
+      Widgets can be specified in a yaml data file or in the frontmatter of pages - this widget is specified in a data file called `examples`.
+  - type: featured
+    title: Featured Content Widget
+    lead: Featured Content widgets have additional styling and are presented in columns
+    image:
+      title: Image
+      url: /assets/img/placeholders/banner-01.jpg
+      caption: Dame Barbara Hepwoth
+    content: |
+      Featured content widgets are ideal for showcasing parts of the site.
+inlinectas:
+  - title: Inline Call to action
+    url: /covid-19/
+    text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, blanditiis.
+  - title: Clearing
+    url: /clearing/
+    text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, blanditiis.
+sectionmenu:
+  title: Examples
+  items:
+    - title: Accordions
+      url: /examples/accordion/
+    - title : Banners
+      url: /examples/banner/
+    - title: Table
+      url: /examples/table/
