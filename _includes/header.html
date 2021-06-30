@@ -1,0 +1,38 @@
+    <div class="uol-header">
+      <header class="uol-global-masthead-outer">
+        <div class="uol-global-masthead uol-content-container">
+          <div class="uol-global-masthead__inner">
+            <a class="uol-skip-link" href="#main">Skip to main content</a>
+            <a class="uol-global-masthead__home" href="{{ "/" | absolute_url }}">
+              {% include uol-logo.svg %}
+              <span class="hide-accessible">{{ site.title | escape }}</span>
+            </a>
+          </div>
+          {% assign pql = page.quicklinks | size %}
+          {% assign ql = site.data.navigation.quicklinks | size %}
+          {% if pql > 0 %}
+            {% assign quicklinks = page.quicklinks %}
+          {% elsif ql > 0 %}
+            {% assign quicklinks = site.data.navigation.quicklinks  %}
+          {% endif %}
+          {% if quicklinks %}
+            {% include header-quicklinks.html quicklinks=quicklinks %}
+          {% endif %}
+
+          {% include header-searchform.html %}
+        </div>
+        
+      </header>
+
+      <header class="uol-header-local-header">
+        <h1 class="uol-header-local-header__site-name">
+            <a href="/">
+                {{ site.title }}
+                <span class="hide-accessible">homepage</span>
+            </a>
+        </h1>
+      </header>
+
+      {% include header-mainnav.html %}
+
+    </div>

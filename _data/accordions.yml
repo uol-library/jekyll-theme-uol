@@ -1,0 +1,21 @@
+#
+#      ___                      ___             
+#     / _ |___________  _______/ (_)__  ___  ___
+#    / __ / __/ __/ _ \/ __/ _  / / _ \/ _ \(_-<
+#   /_/ |_\__/\__/\___/_/  \_,_/_/\___/_//_/___/
+#                                            
+#testacc:
+#  - title: Test accordion 1
+#    content: |
+#      This is some test content for an accordion in markdown
+#
+#      * with a
+#      * bulleted
+#      * list
+#
+#      #### and a subheading
+#
+#      And some more text.
+#  - title: Test accordion 2
+#    content: |
+#      These accordions are in the data file `_data/accordions.yml`.

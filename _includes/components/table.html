@@ -1,0 +1,28 @@
+{% assign caption = include.tablecaption %}
+{% assign tdata = include.tabledata %}
+{% assign sortable = include.sortablecols | split: "," %}
+{% assign nr = tdata | size %}
+{% if caption != "" && nr > 0 %}
+<h2 class="uol-index-table-caption">{{ caption | escape }}</h2>
+<table class="uol-index-table js-uolTableStackable">
+{% for row in tdata %}
+    {% if forloop.first %}
+    <thead>
+        <tr>
+        {% for pair in row %}
+            {% assign rowstr = forloop.index | downcase %}
+            <th class="uol-index-table__th"{% if sortable contains rowstr %} data-sortable="true"{% endif %}>{{ pair[0] | escape }}</th>
+        {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+    {% endif %}
+        <tr>
+        {% for pair in row %} 
+            <td class="uol-index-table__td" data-value="{{ pair[1] | escape }}">{{ pair[1] }}</td>
+        {% endfor %}
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+{% endif %}

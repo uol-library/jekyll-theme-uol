@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{% include section-menu.html %}
+
+{% include components/banner.html %}
+
+  <main id="main" class="uol-content-container">
+    <h1 class="hide-accessible">{{ page.title }}</h1>
+    {% include breadcrumbs.html %}
+    <div class="uol-homepage-content-container">
+      <div class="uol-side-nav-container"></div>
+      <div class="uol-homepage-content">
+          {% include components/inline-ctas.html %}
+          {% if page.widgets %}
+            {% assign pagewidgets = page.widgets %}
+          {% elsif site.data[page.datafile].widgets %}
+            {% assign pagewidgets = site.data[page.datafile].widgets %}
+          {% endif %}
+          {% assign nw = pagewidgets | size %}
+          {% if nw > 0 %}
+            {% for widget in pagewidgets %}
+              {% if widget.type == "content" %}
+                {% include components/content.html content=widget %}
+              {% elsif widget.type == "featured" %}
+                {% include components/featured-content.html content=widget %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+      </div>
+    </div>
+
+    {% include section-menu-ctas.html %}
+  
+    {% include section-menu-related.html %}
+
+  </main>

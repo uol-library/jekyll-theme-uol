@@ -1,0 +1,17 @@
+        {% assign item = include.item %}
+        {% if item.url %}
+        <li class="uol-section-nav__item ">
+          <a class="uol-section-nav__link" href="{{ item.url }}">
+            <span class="uol-section-nav__item__label">{{ item.title }}</span>
+          </a>
+        </li>
+        {% elsif item.items %}
+        <li class="uol-section-nav__item uol-section-nav__item--parent">
+          <h3 class="uol-section-nav__item__label">{{ item.title }}</h3>
+          <ul class="uol-section-nav__sublist">
+            {% for subnavitem in item.items %}
+              {% include section-menu-items.html item=subnavitem %}
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}

@@ -1,4 +1,9 @@
-_site/
-.sass-cache/
-.jekyll-cache/
+_site
+.sass-cache
+.jekyll-cache
 .jekyll-metadata
+vendor
+# omit files used in examples
+pages
+_data/cheeses.csv
+_data/examples.yml

@@ -1,0 +1,31 @@
+{% comment %}
+*
+*   Calls to action placed at the top of content
+*
+{% endcomment %}
+
+{% if page.inlinectas != empty %}
+  {% assign inlinectas = page.inlinectas %}
+{% elsif site.data[page.datafile].inlinectas != empty %}
+  {% assign inlinectas = site.data[page.datafile].inlinectas %}
+{% endif %}
+
+{% assign nc = inlinectas | size %}
+{% if nc > 0 %}
+<div class="uol-widget-container">
+    <div class="uol-widget uol-widget--ctas">
+        <div class="uol-widget__content">
+            <div class="uol-in-text-ctas-wrapper">
+                {% for cta in inlinectas %}
+                <div class="uol-in-text-cta">
+                    <h2 class="uol-in-text-cta__heading">
+                        <a class="uol-in-text-cta__link" href="{{ cta.url }}">{{ cta.title | escape }}</a>
+                    </h2>
+                    <p class="uol-in-text-cta__text">{{ cta.text | strip_html | escape }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

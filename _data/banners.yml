@@ -1,0 +1,20 @@
+#
+#      ___                           
+#     / _ )___ ____  ___  ___ _______
+#    / _  / _ `/ _ \/ _ \/ -_) __(_-<
+#   /____/\_,_/_//_/_//_/\__/_/ /___/
+#                                 
+#
+#samplebanner:
+#  - title: "Lorem Ipsum Dolor sit Amet Consectetural"
+#    imageurl: "/assets/img/placeholders/banner-01.jpg"
+#    imagealt: "University campus"
+#    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellendus necessitatibus harum quo, nemo magni, dolorem natus atque provident suscipit itaque sit perspiciatis!"
+#    link: "/some-cta-link"
+#    linktext: "Some call to action"
+#  - title: "Lorem Ipsum Dolor sit Amet Consectetural"
+#    imageurl: "/assets/img/placeholders/banner-02.jpg"
+#    imagealt: "University campus"
+#    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellendus necessitatibus harum quo, nemo magni, dolorem natus atque provident suscipit itaque sit perspiciatis!"
+#    link: "/some-cta-link"
+#    linktext: "Some call to action"

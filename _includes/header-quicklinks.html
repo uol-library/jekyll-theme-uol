@@ -1,0 +1,16 @@
+<nav class="uol-quicklinks" aria-label="University links">
+    <ul class="uol-quicklinks__list">
+    {% for group in include.quicklinks %}
+      <li class="uol-quicklinks__group">
+        {{ group.title }}
+        <ul class="uol-quicklinks__group__list">
+        {% for link in group.items %}
+          <li class="uol-quicklinks__group__item">
+            <a class="uol-quicklinks__group__link" href="{{ link.url }}">{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+    </ul>
+  </nav>

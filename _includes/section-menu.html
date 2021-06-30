@@ -1,0 +1,23 @@
+{% assign ps = page.sectionmenu.items | size %}
+{% assign ds = site.data[page.datafile].sectionmenu.items | size %}
+{% assign ss = site.data.navigation.sections[page.sectionmenu].items | size %}
+{% if ps > 0 %}
+  {% assign sectionmenu = page.sectionmenu %}
+{% elsif ds > 0 %}
+  {% assign sectionmenu = site.data[page.datafile].sectionmenu %}
+{% elsif ss > 0 %}
+  {% assign sectionmenu = site.data.navigation.sections[page.sectionmenu] %}
+{% endif %}
+{% if sectionmenu %}
+<nav class="uol-section-nav" aria-label="Section navigation">
+    <h2 class="uol-section-nav__title">
+        <span class="uol-section-nav__title__intro">In this section</span>
+        <span class="uol-section-nav__title__text">{{ sectionmenu.title }}</span>
+    </h2>
+    <ul class="uol-section-nav__list">
+        {% for ss in sectionmenu.items %}
+            {% include section-menu-items.html item=ss %}
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}

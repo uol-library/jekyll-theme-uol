@@ -1,0 +1,25 @@
+{% comment %}
+*
+*   Accordions (expandable areas of content with headers)
+*
+{% endcomment %}
+
+{% assign accordion = include.accordion %}
+
+{% assign na = accordion | size %}
+{% if na > 0 %}
+  {% for item in accordion %}
+    {% if item.title != "" and item.content != "" %}
+<div class="uol-accordion">
+    <h2 class="uol-accordion__title">
+        {{ item.title }}
+    </h2>
+    <div class="uol-accordion__content">
+        <div class="uol-rich-text">
+            {{ item.content | markdownify }}
+        </div>
+    </div>
+</div>
+    {% endif %}
+  {% endfor %}
+{% endif %}

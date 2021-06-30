@@ -1,0 +1,44 @@
+# ASCII-Font › http://patorjk.com/software/taag/#p=display&f=Small%20Slant&t=Site%20Settings
+#
+#     _____ __        ____    __  __  _
+#    / __(_) /____   / __/__ / /_/ /_(_)__  ___ ____
+#   _\ \/ / __/ -_) _\ \/ -_) __/ __/ / _ \/ _ `(_-<
+#  /___/_/\__/\__/ /___/\__/\__/\__/_/_//_/\_, /___/
+#                                         /___/
+#
+title: Site title
+author:
+  name: peteredwards
+  email: p.l.edwards@leeds.ac.uk
+description: > # this means to ignore newlines until "show_excerpts:"
+  Write a description for the site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+show_excerpts: false # set to true to show excerpts on the homepage
+google_analytics: "GTM-WJPZM2T" # set to Google Tag manager ID
+
+# Date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+uol:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    # facebook: uol
+    # instagram: uol
+    # linkedin: uol
+    # medium: uol
+    # twitter: uol
+    # weibo: uol
+
+    # either a youtube user
+    # youtube: uol
+    
+    # or a youtube channel
+    # youtube_channel: 
+    # youtube_channel_name: 
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

@@ -1,0 +1,59 @@
+{% assign social = site.uol.social_links %}
+<div class="uol-footer-social-media">
+{% if social.youtube %}
+  <a class="uol-footer-social-media__item" href="https://youtube.com/user/{{ social.youtube | cgi_escape | escape }}" aria-label="YouTube">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+        <path fill="#000000" fill-rule="nonzero" d="M9.6 17.25V6.45l7.2 5.4m4.8-9.12c-.72-.24-5.16-.48-9.6-.48l-9.6.456C.528 3.33 0 7.53 0 11.85c0 4.308.528 8.52 2.4 9.132.72.24 5.16.468 9.6.468l9.6-.468c1.872-.612 2.4-4.824 2.4-9.132 0-4.32-.528-8.508-2.4-9.12z"></path>
+    </svg>
+  </a>
+{% elsif social.youtube_channel %}
+  <a class="uol-footer-social-media__item" href="https://www.youtube.com/channel/{{ social.youtube_channel | cgi_escape | escape }}" aria-label="{{ social.youtube_channel_name | escape | default: 'YouTube' }}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+      <path fill="#000000" fill-rule="nonzero" d="M9.6 17.25V6.45l7.2 5.4m4.8-9.12c-.72-.24-5.16-.48-9.6-.48l-9.6.456C.528 3.33 0 7.53 0 11.85c0 4.308.528 8.52 2.4 9.132.72.24 5.16.468 9.6.468l9.6-.468c1.872-.612 2.4-4.824 2.4-9.132 0-4.32-.528-8.508-2.4-9.12z"></path>
+    </svg>
+  </a>
+{% endif %}
+{% if social.twitter %}
+  <a class="uol-footer-social-media__item" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" aria-label="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+        <path fill="#000000" fill-rule="nonzero" d="M24 4.55c-.883.402-1.836.667-2.822.793a4.94 4.94 0 0 0 2.157-2.736c-.952.575-2.008.977-3.12 1.207-.906-.988-2.18-1.563-3.625-1.563-2.696 0-4.9 2.207-4.9 4.93 0 .39.046.77.126 1.126A13.98 13.98 0 0 1 1.675 3.158C1.25 3.882 1 4.733 1 5.63c0 1.713.86 3.23 2.19 4.092-.815 0-1.572-.23-2.237-.575v.034c0 2.39 1.698 4.39 3.946 4.84-.413.115-.85.172-1.296.172-.3 0-.62-.034-.918-.092.62 1.942 2.42 3.39 4.59 3.425C5.6 18.86 3.488 19.64 1.17 19.64A9.99 9.99 0 0 1 0 19.572C2.18 20.974 4.772 21.8 7.55 21.8c9.04 0 14.008-7.517 14.008-14.034 0-.218 0-.425-.01-.644.964-.7 1.8-1.563 2.455-2.563z"></path>
+    </svg>
+  </a>
+{% endif %}
+{% if social.instagram %}
+  <a class="uol-footer-social-media__item" href="https://instagram.com/{{ social.instagram | cgi_escape | escape }}" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+        <path fill="#000000" fill-rule="nonzero" d="M6.96 0h10.08C20.88 0 24 3.12 24 6.96v10.08A6.96 6.96 0 0 1 17.04 24H6.96C3.12 24 0 20.88 0 17.04V6.96A6.96 6.96 0 0 1 6.96 0m-.24 2.4A4.32 4.32 0 0 0 2.4 6.72v10.56a4.32 4.32 0 0 0 4.32 4.32h10.56a4.32 4.32 0 0 0 4.32-4.32V6.72a4.32 4.32 0 0 0-4.32-4.32H6.72M18.3 4.2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 1 1 0-3M12 6a6 6 0 1 1 0 12 6 6 0 1 1 0-12m0 2.4a3.6 3.6 0 0 0 0 7.2 3.6 3.6 0 0 0 0-7.2z"></path>
+    </svg>
+  </a>
+{% endif %}
+{% if social.linkedin %}
+  <a class="uol-footer-social-media__item" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" aria-label="LinkedIn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+        <path fill="#000000" fill-rule="nonzero" d="M24 24h-5.333v-9c0-1.413-1.587-2.587-3-2.587S13.333 13.587 13.333 15v9H8V8h5.333v2.667C14.213 9.24 16.48 8.32 18 8.32c3.333 0 6 2.72 6 6.013V24M5.333 24H0V8h5.333v16M2.667 0C4.14 0 5.333 1.194 5.333 2.667S4.14 5.333 2.667 5.333 0 4.14 0 2.667 1.194 0 2.667 0z"></path>
+    </svg>
+  </a>
+{% endif %}
+{% if social.facebook %}
+  <a class="uol-footer-social-media__item" href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}/" aria-label="Facebook">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+        <path fill="#000000" fill-rule="nonzero" d="M18 0h0v4.8h-2.4c-.828 0-1.2.972-1.2 1.8v3H18v4.8h-3.6V24H9.6v-9.6H6V9.6h3.6V4.8A4.8 4.8 0 0 1 14.4 0H18z"></path>
+    </svg>
+  </a>
+{% endif %}
+{% if social.medium %}
+  <a class="uol-footer-social-media__item" href="https://medium.com/{{ social.medium | cgi_escape | escape }}" aria-label="Medium">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+        <path fill="#000000" fill-rule="evenodd" d="M24 1.5h-6.687l-4.757 13.348L7.15 1.5H.005v.663l2.517 3.43-.034 13.245L0 22.623l.005.627h7.027l.018-.577-2.944-3.836.078-10.72 6.207 15.132h.75l5.513-15.5v12.6l-2.26 2.383v.508H24v-.61l-2.202-2.328-.03-16.02L24 2.167V1.5z"></path>
+    </svg>
+  </a>
+{% endif %}
+{% if social.weibo %}
+  <a class="uol-footer-social-media__item" href="https://www.weibo.com/{{ social.weibo | cgi_escape | escape }}" aria-label="Weibo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false">
+        <path fill="#000000" fill-rule="nonzero" d="M10.9 20.894c-3.74.39-6.968-1.394-7.2-3.984s2.593-5.006 6.33-5.396 6.968 1.393 7.2 3.982-2.592 5.008-6.33 5.398m7.48-8.6c-.318-.1-.536-.17-.37-.6.36-.957.398-1.784.007-2.374-.733-1.105-2.74-1.046-5.04-.03 0-.001-.722.334-.537-.27.354-1.2.3-2.205-.25-2.786-1.247-1.318-4.566.05-7.41 3.05-2.13 2.25-3.368 4.633-3.368 6.694 0 3.942 4.79 6.338 9.477 6.338 6.143 0 10.23-3.766 10.23-6.756 0-1.807-1.442-2.832-2.738-3.256m4.08-7.213c-1.483-1.735-3.672-2.396-5.69-1.944h-.001c-.467.105-.765.59-.664 1.082s.56.807 1.026.702c1.437-.322 2.992.15 4.047 1.38s1.34 2.914.888 4.39v.001c-.147.48.102.994.557 1.15s.94-.107 1.09-.586c.633-2.08.233-4.44-1.25-6.175"></path>
+        <path d="M19.74 7.668c-.7-.766-1.738-1.057-2.693-.857a.71.71 0 0 0-.556.846c.084.383.468.63.858.546v.001a1.4 1.4 0 0 1 1.318.418c.343.374.435.886.288 1.333h.001a.71.71 0 0 0 .465.896c.38.12.788-.085.91-.46a2.75 2.75 0 0 0-.592-2.724m-8.817 8.113a.53.53 0 0 1-.628.228c-.217-.087-.284-.327-.162-.537s.397-.31.613-.227c.22.08.3.32.177.536m-1.158 1.463c-.35.552-1.104.794-1.67.54-.56-.25-.723-.892-.372-1.43S8.8 15.578 9.36 15.8c.57.24.752.876.406 1.433m1.32-3.905c-1.73-.443-3.684.405-4.434 1.904-.765 1.53-.026 3.226 1.72 3.782 1.8.574 3.942-.306 4.684-1.957.732-1.614-.18-3.275-1.97-3.73"></path>
+    </svg>
+  </a>
+{% endif %}
+</div>
