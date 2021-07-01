@@ -11,7 +11,7 @@
                 <ul class="nav-list-group__list">
                 {% for menuitem in menu.items %}
                   <li class="nav-list-group__item">
-                    <a href="{{ menuitem.url }}" class="nav-list-group__link">{{ menuitem.title }}</a>
+                    <a href="{{ menuitem.url | absolute_url }}" class="nav-list-group__link">{{ menuitem.title }}</a>
                   </li>
                 {% endfor %}
                 </ul>

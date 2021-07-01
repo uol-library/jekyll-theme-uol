@@ -8,13 +8,13 @@
   <nav class="uol-header-local-navigation-wrapper uol-content-container" aria-label="Site navigation">
     <ul class="uol-header-local-navigation">
       <li class="uol-header-local-navigation__item " data-label="Home">
-        <a class="uol-header-local-navigation__link" href="/">Home</a>
+        <a class="uol-header-local-navigation__link" href="{{ "/" | absolute_url }}">Home</a>
       </li>
       {% if navitems %}
         {% for navitem in navitems %}
           {% if navitem.url %}
       <li class="uol-header-local-navigation__item" data-label="{{ navitem.title | escape }}">
-        <a class="uol-header-local-navigation__link" href="{{ navitem.url }}">{{ navitem.title | escape }}</a>
+        <a class="uol-header-local-navigation__link" href="{{ navitem.url | absolute_url }}">{{ navitem.title | escape }}</a>
       </li>
           {% elsif navitem.items %}
       <li class="uol-header-local-navigation__item uol-header-local-navigation__item--parent" data-label="{{ navitem.title | escape }}">
@@ -22,7 +22,7 @@
         <ul class="uol-header-local-navigation__sub-nav" data-title="{{ navitem.title | escape }}">
           {% for subitem in navitem.items %}
           <li class="uol-header-local-navigation__item{% if subitem.cta == 1 %} uol-header-local-navigation__item--cta{% endif %}">
-            <a class="uol-header-local-navigation__link uol-header-local-navigation__link--sub-nav" href="{{ subitem.url }}">{{ subitem.title }}</a>
+            <a class="uol-header-local-navigation__link uol-header-local-navigation__link--sub-nav" href="{{ subitem.url | absolute_url }}">{{ subitem.title }}</a>
           </li>
           {% endfor %}
         </ul>

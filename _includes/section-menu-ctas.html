@@ -13,7 +13,7 @@
     <h3 class="uol-section-nav-ctas__title">{{ ctas.title | escape }}</h3>
     <div class="uol-section-nav-ctas__links">
     {% for cta in ctas.items %}
-        <a class="uol-button uol-section-nav-ctas__link" href="{{ cta.url }}">{{ cta.title | escape }}</a>
+        <a class="uol-button uol-section-nav-ctas__link" href="{{ cta.url | absolute_url }}">{{ cta.title | escape }}</a>
     {% endfor %}
     </div>
 </div>

@@ -16,7 +16,7 @@
         <div class="uol-section-nav-related__item">
             <h3 class="uol-section-nav-related-content__item__title">
             {% if item.link && item.link != "" %}
-                <a class="uol-section-nav-related-content__item__title__link" href="{{ item.link }}">{{ item.title }}</a>
+                <a class="uol-section-nav-related-content__item__title__link" href="{{ item.link | absolute_url }}">{{ item.title }}</a>
             {% else %}
                 {{ item.title }}
             {% endif %}
@@ -28,7 +28,7 @@
             {% if nl > 0 %}
               {% for link in item.links %}
             <div class="uol-section-nav-related-content__item__contact-wrapper">
-                <a class="uol-section-nav-related-content__contact" href="{{ link.url }}">{{ link.title }}</a>
+                <a class="uol-section-nav-related-content__contact uol-section-nav-related-content__contact--{{ link.type | escape }}" href="{{ link.url | absolute_url }}">{{ link.title }}</a>
             </div>
               {% endfor %}
             {% endif %}
