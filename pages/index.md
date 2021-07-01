@@ -265,8 +265,10 @@ related:
       links:
         - title: +44 (0)113 3433213
           url: tel:+441133433212
+          type: phone
         - title: Study@leeds.ac.uk
           url: mailto:Study@leeds.ac.uk
+          type: email
 banner: samplebanner
 widgets:
   - type: content

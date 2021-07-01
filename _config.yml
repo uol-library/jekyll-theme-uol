@@ -18,12 +18,20 @@ description: > # this means to ignore newlines until "show_excerpts:"
 show_excerpts: false # set to true to show excerpts on the homepage
 google_analytics: "GTM-WJPZM2T" # set to Google Tag manager ID
 
-# Date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-uol:
-  date_format: "%b %-d, %Y"
+# contact information
+contact:
+  organisation: University of Leeds
+  # Address
+  address:
+    street: Woodhouse Lane
+    locality: Leeds
+    region: West Yorkshire
+    postcode: LS2 9JT
+    country: UK
+  telephone: +44 0113 243 1751
+  email: 
 
-  # generate social links in footer
+  # Social media links
   social_links:
     # facebook: uol
     # instagram: uol
@@ -38,6 +46,12 @@ uol:
     # or a youtube channel
     # youtube_channel: 
     # youtube_channel_name: 
+
+# Date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+uol:
+  date_format: "%b %-d, %Y"
+
 
 plugins:
  - jekyll-feed

@@ -1,0 +1,34 @@
+{% if site.contact != empty %}
+<div class="uol-site-footer__address-container ">
+    <h2 class="uol-footer-contact__title">Contact information</h2>
+    <address class="uol-footer-contact" vocab="https://schema.org/" typeof="Organization">
+      {% if site.contact.organisation != empty %}<strong class="uol-footer-contact__name" property="name">{{ site.contact.organisation }}</strong>{% endif %}
+      {% if site.contact.address != empty %}
+      <div class="uol-footer-contact__address" property="address" typeof="PostalAddress">
+        {% if site.contact.address.street != empty %}<div property="streetAddress"><span class="uol-footer-contact__address__item" >{{ site.contact.address.street }}</span></div>{% endif %}
+        {% if site.contact.address.locality != empty %}<span class="uol-footer-contact__address__item" property="addressLocality">Leeds</span>{% endif %}
+        {% if site.contact.address.region != empty %}<span class="uol-footer-contact__address__item" property="addressRegion">West Yorkshire</span>{% endif %}
+        {% if site.contact.address.postcode != empty %}<span class="uol-footer-contact__address__item" property="postalCode">LS2 9JT</span>{% endif %}
+        {% if site.contact.address.country != empty %}<span class="uol-footer-contact__address__item" property="addressCountry">United Kingdom</span>{% endif %}
+      </div>
+      {% endif %}
+      {% if site.contact.telephone != empty && site.contact.email != empty %}
+      <dl class="uol-footer-contact__telephone-email-container">
+        {% if site.contact.telephone != empty %}
+        <dt class="uol-footer-contact__telephone-email-label">Telephone</dt>
+        <dd class="uol-footer-contact__telephone-email-data">
+          <a class="uol-footer-contact__telephone" href="tel:{{ site.contact.telephone | remove: " " }}" property="telephone">{{ site.contact.telephone }}</a>
+        </dd>
+        {% endif %}
+        {% if site.contact.email != empty %}
+        <dt class="uol-footer-contact__telephone-email-label">Email</dt>
+        <dd class="uol-footer-contact__telephone-email-data">
+          <a class="uol-footer-contact__email" href="mailto:{{ site.contact.email }}" property="email">{{ site.contact.email }}</a>
+        </dd>
+        {% endif %}
+      </dl>
+      {% endif %}
+    </address>
+    {% include social.html %}
+</div>
+{% endif %}

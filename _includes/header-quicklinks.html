@@ -6,7 +6,7 @@
         <ul class="uol-quicklinks__group__list">
         {% for link in group.items %}
           <li class="uol-quicklinks__group__item">
-            <a class="uol-quicklinks__group__link" href="{{ link.url }}">{{ link.title | escape }}</a>
+            <a class="uol-quicklinks__group__link" href="{{ link.url | absolute_url }}">{{ link.title | escape }}</a>
           </li>
         {% endfor %}
         </ul>
