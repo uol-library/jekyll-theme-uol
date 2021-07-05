@@ -1,20 +1,3 @@
-widgets:
-  - type: content
-    title: Content Widget
-    lead: Content widgets can contain a mixture of text and image
-    content: |
-      The home page template has a different structure to standard pages and is made up entirely of widgets.
-
-      Widgets can be specified in a yaml data file or in the frontmatter of pages - this widget is specified in a data file called `examples`.
-  - type: featured
-    title: Featured Content Widget
-    lead: Featured Content widgets have additional styling and are presented in columns
-    image:
-      title: Image
-      url: /assets/img/placeholders/banner-01.jpg
-      caption: Dame Barbara Hepwoth
-    content: |
-      Featured content widgets are ideal for showcasing parts of the site.
 inlinectas:
   - title: Inline Call to action
     url: /covid-19/
@@ -23,7 +6,7 @@ inlinectas:
     url: /clearing/
     text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, blanditiis.
 sectionmenu:
-  title: Examples
+  title: Components
   items:
     - title: Accordions
       url: /examples/accordion/
@@ -31,3 +14,39 @@ sectionmenu:
       url: /examples/banner/
     - title: Table
       url: /examples/table/
+mainmenu:
+  - title: Examples
+    url: /examples/
+ac2:
+  - title: Test accordion 3
+    content: |
+      This is some test content for an accordion in markdown
+
+      * with a
+      * bulleted
+      * list
+
+      #### and a subheading
+
+      with some other text.
+  - title: Test accordion 4
+    content: Just a _bit_ of **text** here.
+related:
+  title: Wiki content
+  items:
+    - title: Introduction
+      links:
+        - title: Theme Configuration
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Theme-configuration
+        - title: Menus
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Menus
+        - title: Page Templates
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Page-templates
+    - title: Introduction
+      links:
+        - title: Theme Configuration
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Theme-configuration
+        - title: Menus
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Menus
+        - title: Page Templates
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Page-templates

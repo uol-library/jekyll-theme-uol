@@ -1,0 +1,51 @@
+{% assign postcontent = include.content %}
+
+{% assign datefmt = site.date_format %}
+{% assign day = postcontent.date | date: "%-d" %}
+{% case day %}
+  {% when '1' or '21' or '31' %}{% assign datefmt = "%A %-dst %b, %Y" %}
+  {% when '2' or '22' %}{% assign datefmt = "%A %-dnd %b, %Y" %}
+  {% when '3' or '23' %}{% assign datefmt = "%A %-drd %b, %Y" %}
+  {% else %}{% assign datefmt = "%A %-dth %b, %Y" %}
+{% endcase %}
+
+    <article class="uol-results-items__item uol-results-items__item--has-image ">
+        <div class="uol-results-items__item__text-container">
+            <h2 class="uol-results-items__item__title">
+                <a href="{{ postcontent.url | absolute_url }}" class="uol-results-items__item__link">{{ postcontent.title | escape }}</a>
+            </h2>
+
+            <dl class="uol-results-items__item__meta">
+                <div class="uol-results-items__item__meta__group">
+                    <dt class="uol-results-items__item__meta__label">Published</dt>
+                    <dd class="uol-results-items__item__meta__data">
+                        {{ postcontent.date | format: datefmt }}
+                    </dd>
+                </div>
+                {% if postcontent.categories.size > 0 %}
+                <div class="uol-results-items__item__meta__group">
+                    <dt class="uol-results-items__item__meta__label">Categories</dt>
+                    {% for category in postcontent.categories %}
+                    <dd class="uol-results-items__item__meta__data">{{ category }}</dd>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if postcontent.tags.size > 0 %}
+                <div class="uol-results-items__item__meta__group">
+                    <dt class="uol-results-items__item__meta__label">Tags</dt>
+                    {% for tag in postcontent.tags %}
+                    <dd class="uol-results-items__item__meta__data">{{ tag }}</dd>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </dl>
+
+            <p class="uol-results-items__item__summary">{{ postcontent.excerpt | strip_html }}</p>
+        </div>
+
+        {% if postcontent.image && postcontent.imagealt %}
+        <div class="uol-results-items__item__image-container">
+            <img class="uol-results-items__item__img" src="{{ postcontent.image | absolute_url }}" alt="{{ postcontent.imagealt | escape }}">
+        </div>
+        {% endif %}
+    </article>

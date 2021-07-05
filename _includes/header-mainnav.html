@@ -1,7 +1,10 @@
 {% assign pmn = page.mainmenu | size %}
+{% assign dmn = site.data[page.datafile].mainmenu | size %}
 {% assign mn = site.data.navigation.mainmenu | size %}
-{% if pmn > 0 %}
+{% if page.mainmenu && pmn > 0 %}
   {% assign navitems = page.mainmenu %}
+{% elsif site.data[page.datafile].mainmenu && dmn > 0 %}
+  {% assign navitems = site.data[page.datafile].mainmenu %}
 {% elsif mn > 0 %}
   {% assign navitems = site.data.navigation.mainmenu %}
 {% endif %}

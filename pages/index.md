@@ -269,7 +269,19 @@ related:
         - title: Study@leeds.ac.uk
           url: mailto:Study@leeds.ac.uk
           type: email
-banner: samplebanner
+banners:
+  - title: "Lorem Ipsum Dolor sit Amet Consectetural"
+    imageurl: "/assets/img/placeholders/banner-01.jpg"
+    imagealt: "University campus"
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellendus necessitatibus harum quo, nemo magni, dolorem natus atque provident suscipit itaque sit perspiciatis!"
+    link: "/some-cta-link"
+    linktext: "Some call to action"
+  - title: "Lorem Ipsum Dolor sit Amet Consectetural"
+    imageurl: "/assets/img/placeholders/banner-02.jpg"
+    imagealt: "University campus"
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellendus necessitatibus harum quo, nemo magni, dolorem natus atque provident suscipit itaque sit perspiciatis!"
+    link: "/some-cta-link"
+    linktext: "Some call to action"
 widgets:
   - type: content
     title: Content Widget
