@@ -17,7 +17,7 @@
         <div class="uol-widget__content">
             {% if item.image && item.image.alt && item.image.alt != "" && item.image.url && item.image.url != "" %}
             <figure class="uol-featured-image">
-                <img class="uol-featured-image__img" src="{{ item.image.url }}" alt="{{ item.image.alt | escape }}">
+                <img class="uol-featured-image__img" src="{{ item.image.url | absolute_url }}" alt="{{ item.image.alt | escape }}">
                 {% if item.image.caption && item.image.caption != "" %}
                 <figcaption class="uol-featured-image__caption">{{ item.image.caption | strip_html | escape }}</figcaption>
                 {% endif %}

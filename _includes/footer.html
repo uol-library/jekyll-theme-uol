@@ -21,31 +21,8 @@
           </nav>
         </div>
         {% endif %}
-        <div class="uol-site-footer__address-container ">
-          <h2 class="uol-footer-contact__title">Contact information</h2>
-          <address class="uol-footer-contact" vocab="https://schema.org/" typeof="Organization">
-            <strong class="uol-footer-contact__name" property="name">University of Leeds</strong>
-            <div class="uol-footer-contact__address" property="address" typeof="PostalAddress">
-              <div property="streetAddress">
-                <span class="uol-footer-contact__address__item" >Woodhouse Lane</span>
-              </div>
-              <span class="uol-footer-contact__address__item" property="addressLocality">Leeds</span>
-              <span class="uol-footer-contact__address__item" property="addressRegion">West Yorkshire</span>
-              <span class="uol-footer-contact__address__item" property="postalCode">LS2 9JT</span>
-              <span class="uol-footer-contact__address__item" property="addressCountry">United Kingdom</span>
-            </div>
-          
-            <dl class="uol-footer-contact__telephone-email-container">
-              <dt class="uol-footer-contact__telephone-email-label">Telephone</dt>
-              <dd class="uol-footer-contact__telephone-email-data">
-                <a class="uol-footer-contact__telephone" href="tel:+4401132431751" property="telephone">+44 0113 243 1751</a>
-              </dd>
-            </dl>
-          </address>
-
-          {% include social.html %}
-      
-        </div>
+        
+        {% include address.html %}
 
         <div class="uol-site-footer__site-information-container">
           <nav class="footer-site-information" aria-label="Site information">
@@ -55,7 +32,7 @@
               {% assign hasfooterinfo = site.data.navigation.footerinfo | size %}
               {% if hasfooterinfo > 0 %}
                 {% for link in site.data.navigation.footerinfo %}
-              <li class="footer-site-information__item"><a class="footer-site-information__link" href="{{ link.url }}">{{ link.title }}</a></li>
+              <li class="footer-site-information__item"><a class="footer-site-information__link" href="{{ link.url | absolute_url }}">{{ link.title }}</a></li>
                 {% endfor %}
               {% endif %}
             </ul>

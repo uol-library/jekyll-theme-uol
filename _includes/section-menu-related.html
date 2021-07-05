@@ -1,11 +1,11 @@
 {% assign prel = page.related.items | size %}
 {% assign drel = site.data[page.datafile].related.items | size %}
 {% assign srel = site.data.navigation.related[page.related].items | size %}
-{% if prel > 0 %}
+{% if page.related && prel > 0 %}
   {% assign rel = page.related %}
-{% elsif drel > 0 %}
+{% elsif site.data[page.datafile].related && drel > 0 %}
   {% assign rel = site.data[page.datafile].related %}
-{% elsif srel > 0 %}
+{% elsif site.data.navigation.related[page.related] && srel > 0 %}
   {% assign rel = site.data.navigation.related[page.related] %}
 {% endif %}
 {% if rel && rel.title != "" %}

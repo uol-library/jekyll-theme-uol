@@ -6,18 +6,17 @@
 *
 {% endcomment %}
 
-{% if page.banner != empty %}
-  {% if site.data.banners[page.banner] != empty %}
-    {% assign bnr = site.data.banners[page.banner] %}
-  {% else %}
-    {% assign bnr = page.banner %}
-  {% endif %}
-{% elsif site.data[page.datafile].banners != empty %}
+{% assign ndb = site.data[page.datafile].banners | size %}
+{% assign nsb = site.data.banners[page.banner] | size %}
+{% if page.banners != empty %}
+  {% assign bnr = page.banners %}
+{% elsif ndb > 0 %}
   {% assign bnr = site.data[page.datafile].banners %}
+{% elsif nsb > 0 %}
+  {% assign bnr = site.data.banners[page.banner] %}
 {% endif %}
 {% assign nb = bnr | size %}
 {% if nb > 0 %}
-  
   <div class="uol-banner-outer">
     {% if nb == 1 %}
     <div class="uol-banner-container">

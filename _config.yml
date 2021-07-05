@@ -6,6 +6,7 @@
 #  /___/_/\__/\__/ /___/\__/\__/\__/_/_//_/\_, /___/
 #                                         /___/
 #
+theme: 
 title: Site title
 author:
   name: peteredwards
@@ -14,8 +15,6 @@ description: > # this means to ignore newlines until "show_excerpts:"
   Write a description for the site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-
-show_excerpts: false # set to true to show excerpts on the homepage
 google_analytics: "GTM-WJPZM2T" # set to Google Tag manager ID
 
 # contact information
@@ -47,12 +46,15 @@ contact:
     # youtube_channel: 
     # youtube_channel_name: 
 
-# Date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-uol:
-  date_format: "%b %-d, %Y"
+# Blog settings
+paginate: 10
+paginate_path: "/blog/page:num/"
+show_excerpts: true
+# Date format - this is overridden in post-list-item.html
+date_format: "%A %-d %b, %Y"
 
 
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ - jekyll-paginate

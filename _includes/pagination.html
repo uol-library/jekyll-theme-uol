@@ -1,0 +1,39 @@
+{% if site.paginate && paginator.total_pages > 1 %}
+<nav class="uol-pagination" aria-label="pagination">
+    <ol class="uol-pagination__list">
+        <li class="uol-pagination__item">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="uol-button uol-button--primary uol-icon uol-icon--icon-only uol-icon--mdiArrowLeft">Previous page</a>
+        {% else %}
+            <button class="uol-button uol-button--primary uol-icon uol-icon--icon-only uol-icon--mdiArrowLeft" type="button" disabled>Previous page</button>
+        {% endif %}
+        </li>
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == 1 %}
+                {% assign pageurl = paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' %}
+            {% else %}
+                {% assign pageurl = site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page %}
+            {% endif %}
+        <li class="uol-pagination__item uol-pagination__item--numeric{% if page == paginator.page %} uol-pagination__item--current{% endif %}">
+            <a class="uol-button uol-button--secondary uol-icon uol-icon--icon-only uol-pagination__link" href="{{ pageurl }}" data-number="{{ page }}"{% if page == paginator.page %} aria-current=page{% endif %}>
+                <span class="uol-icon__label">
+                    <span class="hide-accessible">Page </span>{{ page }}
+                </span>
+            </a>
+        </li>
+        {% endfor %}
+        
+        <li class="uol-pagination__item">
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="uol-button uol-button--primary uol-icon uol-icon--icon-only uol-icon--mdiArrowRight">Next page</a>
+        {% else %}
+            <button class="uol-button uol-button--primary uol-icon uol-icon--icon-only uol-icon--mdiArrowRight" type="button" disabled>Next page</button>
+        {% endif %}
+        </li>
+    </ol>
+
+    <span class="uol-pagination__status">
+        Page {{ paginator.page }} of {{ paginator.total_pages }}
+    </span>
+</nav>
+{% endif %}

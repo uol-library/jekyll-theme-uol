@@ -2,60 +2,39 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{% if site.paginate %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
 
-  {{ content }}
+{% assign date_format = site.date_format | default: "%b %-d, %Y" %}
 
-
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
+{% include blog-menu.html %}
+  <main id="main" class="uol-content-container">
+    {% include breadcrumbs.html %}
+    <div class="uol-col-container">
+      <div class="uol-side-nav-container"></div>
+      <div class="uol-page">
+        <div class="uol-page__head">
+          <header class="page-heading">
+            <h1 class="page-heading__title">{{ page.title }}</h1>
+          </header>
+        </div>
+        <div class="uol-page__content">
+          {% if posts.size > 0 %}
+          <div class="uol-results-items">
+            {% for post in posts %}
+              {% include post-list-item.html content=post %}
+            {% endfor %}
+          </div>
+          {% include pagination.html %}
+          {% endif %}
+        </div>
       </div>
-    {%- endif %}
+    </div>
 
-  {%- endif -%}
+    {% include blog-menu-ctas.html %}
 
-</div>
+  </main>
+
