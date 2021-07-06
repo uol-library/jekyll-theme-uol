@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Images
 datafile: examples
 permalink: /examples/images/

@@ -251,17 +251,20 @@ sectionmenu:
           url: "/examples/"
         - title: "Parents FAQs"
           url: "/examples/"
-sectionctas: discover
+sectionctas: 
+  title: Section Calls to action
+  items:
+    - title: Go here
+      url: "/examples/"
+    - title: Then go here
+      url: "/examples/"
 related:
   title: Related content
   items:
-    - title: Meet our students
+    - title: Related content block
       link: "/examples/"
-      text: Hear from some of our undergraduates about some of the exciting things they&#39;ve done to make the most of their student experience Hear from some of our undergraduates about some of the exciting things.
-    - title: Meet our staff
-      link: "/examples/"
-      text: We understand that applicants and offer holders may have concerns about the ongoing coronavirus (COVID-19) situation and your plans to study with us at Leeds.
-    - title: Admissions Enquiries
+      text: These text boxes can contain stylised links and are placed under the left hand menu or at the bottom of the page on smaller screens.
+    - title: Related content block with links
       links:
         - title: +44 (0)113 3433213
           url: tel:+441133433212
@@ -274,13 +277,13 @@ banners:
     imageurl: "/assets/img/placeholders/banner-01.jpg"
     imagealt: "University campus"
     text: "This page showcases the different menus and content configurations which are availalbe in the home page template of this theme."
-    link: "/examples/"
+    linkurl: "/examples/"
     linktext: "View other examples"
   - title: "Lorem Ipsum Dolor sit Amet Consectetural"
     imageurl: "/assets/img/placeholders/banner-02.jpg"
     imagealt: "University campus"
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellendus necessitatibus harum quo, nemo magni, dolorem natus atque provident suscipit itaque sit perspiciatis!"
-    link: "/examples/"
+    linkurl: "/examples/"
     linktext: "Some call to action"
 widgets:
   - type: content
@@ -374,10 +377,10 @@ widgets:
 inlinectas:
   - title: Inline Call to action
     url: "/examples/"
-    text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, blanditiis.
-  - title: Clearing
+    text: Calls to action can be added to the top of the page.
+  - title: Inline Call to action
     url: "/examples/"
-    text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, blanditiis.
+    text: Calls to action can be added to the top of the page.
 permalink: /
 ---
 

@@ -4,7 +4,8 @@ title:  "Welcome to Jekyll!"
 date:   2021-06-15 14:23:58 +0100
 image: /assets/img/placeholders/banner-01.jpg
 imagealt: Dame Barbara Hepworth
-categories: jekyll update
+datafile: examples
+categories: jekyll
 ---
 You’ll find this post in the `_posts` directory.
 

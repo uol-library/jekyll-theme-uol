@@ -7,13 +7,13 @@ banners:
     imageurl: "/assets/img/placeholders/banner-01.jpg"
     imagealt: "University campus"
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellendus necessitatibus harum quo, nemo magni, dolorem natus atque provident suscipit itaque sit perspiciatis!"
-    link: "/some-cta-link"
+    linkurl: "/examples/banner/"
     linktext: "Some call to action"
   - title: "Lorem Ipsum Dolor sit Amet Consectetural"
     imageurl: "/assets/img/placeholders/banner-02.jpg"
     imagealt: "University campus"
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellendus necessitatibus harum quo, nemo magni, dolorem natus atque provident suscipit itaque sit perspiciatis!"
-    link: "/some-cta-link"
+    linkurl: "/examples/banner/"
     linktext: "Some call to action"
 inlinectas: false
 widgets:
@@ -31,7 +31,7 @@ widgets:
           imageurl:
           imagealt:
           text:
-          link:
+          linkurl:
           linktext:
         - title
           ...

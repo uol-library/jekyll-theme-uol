@@ -1,18 +1,25 @@
+###############################################################################
 #     _____ __        _  __          _           __  _         
 #    / __(_) /____   / |/ /__ __  __(_)__ ____ _/ /_(_)__  ___ 
 #   _\ \/ / __/ -_) /    / _ `/ |/ / / _ `/ _ `/ __/ / _ \/ _ \
 #  /___/_/\__/\__/ /_/|_/\_,_/|___/_/\_, /\_,_/\__/_/\___/_//_/
 #                                   /___/                     
+# 
 # This file contains the main site navigation.
 #
 # There are four main navigation areas:
 #
 #   quicklinks - these are the menus at the top of the page in the black header
-#   main - this is the main menu shown below the black header
-#   section - this is a menu which can be turned on and off for different pages and can be used for contextual navigation
-#   footer - the footer has three menu areas in columns and another in the bottom band of the site
+#   main       - this is the main menu shown below the black header
+#   section    - this is a menu which can be turned on and off for different
+#                pages and can be used for contextual navigation
+#   footer     - the footer has three menu areas in columns and another in the
+#                bottom band of the site
 #
-# All navigation items have a title and either have an items collection (for a nested menu) or a url
+# All navigation items have a title and either have an items collection (for 
+# a nested menu) or a url.
+#
+###############################################################################
 
 # Quicklinks are placed in the black header at the top of each page
 # This menu must only be nested one level deep.
@@ -27,8 +34,9 @@
 #      - url: 
 #        title: 
 
-# Main menu placed under the black header
-# This menu must only be nested one level deep. Items on the nested level can also have a cta property which will change the link's appearance
+# The Main Menu placed under the black header
+# This menu must only be nested one level deep. Items on the nested level can
+# also have a cta property which will change the link's appearance
 
 #mainmenu:
 #  - title:
@@ -41,9 +49,9 @@
 #  - title: 
 #    url: 
 
-# Section menu
-# The section menu is located to the left of content on larger screens and forms a dropdown on smaller screens
-# So different pages can be in different sections, each menu has a name, and is referred to in page front matter
+# The Section Menu is located to the left of content on larger screens and
+# forms a dropdown on smaller screens. As different pages can be in different
+# sections, each menu has a name, and is referred to in page front matter
 # like this:
 
 # sectionmenu: sectionname
@@ -57,10 +65,10 @@
 #      - title :
 #        url:
 
-# Section Calls to action
-# These are located under the section menu to the left of content on larger screens and under the page content on
-# smaller screens. So different pages can be in different sections, each menu has a name, and is referred to in 
-# page front matter like this:
+# Section Calls to action are located under the section menu to the left of
+# content on larger screens and under the page content on smaller screens.
+# As different pages can be in different sections, each menu has a name, and is
+# referred to in page front matter like this:
 
 # sectionctas: sectionctaname
 
