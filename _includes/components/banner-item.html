@@ -9,5 +9,5 @@
                 <h3 class="uol-banner__item__title">{{ banner.title }}</h3>
                 <img class="uol-banner__item__img" src="{{ banner.imageurl | absolute_url }}" alt="{{ banner.imagealt | escape }}">
                 <p class="uol-banner__item__lead">{{ banner.text }}</p>
-                <a class="uol-banner__item__link" href="{{ banner.linkurl }}">{{ banner.linktext }}</a>
+                <a class="uol-banner__item__link" href="{{ banner.linkurl | absolute_url }}">{{ banner.linktext }}</a>
 {% endif %}
