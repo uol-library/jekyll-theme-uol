@@ -1,0 +1,20 @@
+{% assign type = include.type | default: "block" %}
+{% if type == "pull" %}
+  {% assign align = include.align | default: "right" %}
+<div aria-hidden="true" class="uol-typography-pull-quote uol-typography-pull-quote--{{ align | escape }}">
+    <p>{{ include.content | strip_html }}</p>
+</div>
+{% elsif type == "block" %}
+<blockquote class="uol-typography-blockquote"{% if include.citeurl %} cite="{{ include.citeurl | absolute_url }}"{% endif %}>
+    <p>{{ include.content | strip_html }}</p>
+    {% if include.cite %}
+    <footer>
+        <cite>
+            {% if include.citeurl %}<a href="{{ include.citeurl | absolute_url }}">{% endif %}
+                {{ include.cite | strip_html }}
+            {% if include.citeurl %}</a>{% endif %}
+        </cite>
+    </footer>
+    {% endif %}
+</blockquote>
+{% endif %}

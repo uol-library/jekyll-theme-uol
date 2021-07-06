@@ -1,0 +1,43 @@
+
+{% if include.content.number and include.content.number > 1 %}
+
+{% assign np = site.posts | size %}
+{% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+{% if np > 0 %}
+<div class="uol-widget-container">
+    <div class="uol-widget uol-widget--news-events">
+        {% if include.content.title or include.content.lead or include.content.link %}
+        <div class="uol-widget__head">
+            {% if include.content.title %}
+            <h2 class="uol-widget__title">{{ include.content.title }}</h2>
+            {% endif %}
+            {% if include.content.lead %}
+            <div class="uol-widget__lead">
+                <p>{{ include.content.lead | strip_html }}</p>
+            </div>
+            {% endif %}
+            {% if include.content.link %}
+            <a class="uol-widget__link" href="{{ "/blog/" | absolute_url }}">View all posts</a>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% if np < include.content.number %}
+          {% assign numberposts = np %}
+        {% else %}
+          {% assign numberposts = include.content.number %}
+        {% endif %}
+        <div class="uol-widget__content">
+            <ul class="uol-cards  uol-cards--count-{{ numberposts }} uol-cards--image-layout" role="list">
+            {% for post in site.posts %}
+              {% if forloop.index > numberposts %}
+                {% break %}
+              {% endif %}
+              {% include components/post-card-item.html content=post excerpt=include.content.excerpt image=include.content.image %}
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endif %}

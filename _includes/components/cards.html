@@ -1,0 +1,46 @@
+{% comment %}
+*
+*   Cards widget for home page
+*
+{% endcomment %}
+
+{% assign cardno = include.content.cards | size %}
+{% if cardno > 0 %}
+<div class="uol-widget-container">
+    <div class="uol-widget uol-widget--cards">
+        {% if include.content.title or include.content.lead %}
+        <div class="uol-widget__head">
+            {% if include.content.title %}
+            <h2 class="uol-widget__title">{{ include.content.title }}</h2>
+            {% endif %}
+            {% if include.content.lead %}
+            <div class="uol-widget__lead">
+                <p>{{ include.content.lead | strip_html }}</p>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        <div class="uol-widget__content">
+            <ul class="uol-cards {% if include.content.featured %}uol-cards--featured {% endif %}uol-cards--count-{{ cardno }} uol-cards--image-layout" role="list">
+            {% for card in include.content.cards %}
+                {% if forloop.index < 8 and card.imageurl and card.imagealt and card.link and card.title and card.content %}    
+                <li class="uol-cards__card uol-cards__card--with-image" role="listitem">
+                    <div class="uol-cards__card__text-wrapper">
+                        <h3 class="uol-cards__card__title">
+                            <a class="uol-cards__card__link" href="{{ card.link | absolute_url }}">
+                                {{ card.title }}
+                            </a>
+                        </h3>
+                        <p class="uol-cards__card__text">{{ card.content | strip_html }}</p>
+                    </div>
+                    <div class="uol-cards__card__image-wrapper">
+                        <img class="uol-cards__card__image" src="{{ card.imageurl | absolute_url }}" alt="{{ card.imagealt | escape }}" />
+                    </div>
+                </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endif %}
