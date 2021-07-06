@@ -1,14 +1,14 @@
 {% assign pctas = page.sectionctas.items | size %}
 {% assign dctas = site.data[page.datafile].sectionctas.items | size %}
 {% assign sctas = site.data.navigation.sectionctas[page.sectionctas].items | size %}
-{% if pctas > 0 %}
+{% if page.sectionctas and pctas > 0 %}
   {% assign ctas = page.sectionctas %}
-{% elsif dctas > 0 %}
+{% elsif site.data[page.datafile].sectionctas and dctas > 0 %}
   {% assign ctas = site.data[page.datafile].sectionctas %}
-{% elsif sctas > 0 %}
+{% elsif site.data.navigation.sectionctas[page.sectionctas] and sctas > 0 %}
   {% assign ctas = site.data.navigation.sectionctas[page.sectionctas] %}
 {% endif %}
-{% if ctas && ctas.title != "" %}
+{% if ctas and ctas.title != "" %}
 <div class="uol-section-nav-ctas">
     <h3 class="uol-section-nav-ctas__title">{{ ctas.title | escape }}</h3>
     <div class="uol-section-nav-ctas__links">
