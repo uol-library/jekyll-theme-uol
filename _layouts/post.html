@@ -45,7 +45,7 @@ layout: default
           
                     <div class="page-heading__meta__group">
                         <dt class="page-heading__meta__label">Published</dt>
-                        <dd class="page-heading__meta__data" itemprop="datePublished"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | format: datefmt }}</time></dd>
+                        <dd class="page-heading__meta__data" itemprop="datePublished"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: datefmt }}</time></dd>
                     </div>
                 </dl>
             </header>

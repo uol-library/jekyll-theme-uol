@@ -1,0 +1,29 @@
+{% assign postcontent = include.content %}
+
+{% assign datefmt = site.date_format %}
+{% assign day = postcontent.date | date: "%-d" %}
+{% case day %}
+  {% when '1' or '21' or '31' %}{% assign datefmt = "%A %-dst %b, %Y" %}
+  {% when '2' or '22' %}{% assign datefmt = "%A %-dnd %b, %Y" %}
+  {% when '3' or '23' %}{% assign datefmt = "%A %-drd %b, %Y" %}
+  {% else %}{% assign datefmt = "%A %-dth %b, %Y" %}
+{% endcase %}
+
+<li class="uol-cards__card {% if postcontent.image and postcontent.imagealt %}uol-cards__card--with-image{% endif %}" role="listitem">
+    <div class="uol-cards__card__text-wrapper">
+        <h3 class="uol-cards__card__title">
+            <a class="uol-cards__card__link" href="{{ postcontent.url | absolute_url }}">
+                {{ postcontent.title | escape }}
+            </a>
+        </h3>
+        <time class="uol-cards__card__date" datetime="{{ postcontent.date | date_to_xmlschema }}">{{ postcontent.date | date: datefmt }}</time>
+        {% if include.excerpt %}
+        <p class="uol-cards__card__text">{{ postcontent.excerpt | strip_html }}</p>
+        {% endif %}
+    </div>
+    {% if postcontent.image and postcontent.imagealt and include.image %}
+    <div class="uol-cards__card__image-wrapper">
+        <img class="uol-cards__card__image" src="{{ postcontent.image | absolute_url }}" alt="{{ postcontent.imagealt | escape }}" />
+    </div>
+    {% endif %}
+</li>

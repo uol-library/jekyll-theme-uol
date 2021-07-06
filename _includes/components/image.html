@@ -1,7 +1,7 @@
 
-{% if include.imageurl and include.imagealt and include.imagealt != "" %}
+{% if include.url and include.alt and include.alt != "" %}
 <figure class="uol-featured-image">
-    <img class="uol-featured-image__img" src="{{ include.imageurl | absolute_url }}" alt="{{ include.alt | escape }}">
+    <img class="uol-featured-image__img" src="{{ include.url | absolute_url }}" alt="{{ include.alt | escape }}">
     {% if include.caption and include.caption != "" %}
     <figcaption class="uol-featured-image__caption">
         {{ include.caption }}

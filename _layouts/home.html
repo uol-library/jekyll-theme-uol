@@ -24,6 +24,10 @@ layout: default
                 {% include components/content.html content=widget %}
               {% elsif widget.type == "featured" %}
                 {% include components/featured-content.html content=widget %}
+                {% elsif widget.type == "cards" %}
+                {% include components/cards.html content=widget %}
+                {% elsif widget.type == "latest-posts" %}
+                {% include components/latest-posts.html content=widget %}
               {% endif %}
             {% endfor %}
           {% endif %}
