@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Table
+title: Tables
 datafile: examples
-permalink: /examples/table/
+permalink: /examples/tables/
 ---
 
 Tables can be included in pages using data from the `_data` directory and the table component. For example, take the following code:

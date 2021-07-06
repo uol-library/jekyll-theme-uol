@@ -8,12 +8,16 @@ inlinectas:
 sectionmenu:
   title: Components
   items:
+    - title: Images
+      url: /examples/images/
+    - title: Quotes
+      url: /examples/quotes/
     - title: Accordions
       url: /examples/accordion/
     - title : Banners
       url: /examples/banner/
-    - title: Table
-      url: /examples/table/
+    - title: Tables
+      url: /examples/tables/
 mainmenu:
   - title: Examples
     url: /examples/

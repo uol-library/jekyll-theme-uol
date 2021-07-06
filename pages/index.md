@@ -256,10 +256,10 @@ related:
   title: Related content
   items:
     - title: Meet our students
-      link: /meet-our-students
+      link: "/examples/"
       text: Hear from some of our undergraduates about some of the exciting things they&#39;ve done to make the most of their student experience Hear from some of our undergraduates about some of the exciting things.
     - title: Meet our staff
-      link: /meet-our-staff
+      link: "/examples/"
       text: We understand that applicants and offer holders may have concerns about the ongoing coronavirus (COVID-19) situation and your plans to study with us at Leeds.
     - title: Admissions Enquiries
       links:
@@ -299,12 +299,84 @@ widgets:
       caption: Dame Barbara Hepwoth
     content: |
       Featured content widgets are ideal for showcasing parts of the site.
+  - type: latest-posts
+    number: 6
+    title: Latest posts
+    lead: You can display latest posts with or without images and excerpts - the maximum supported is 6.
+    link: true
+    image: true
+    excerpt: true
+  - type: cards
+    featured: false
+    title: Cards Widgets
+    lead: |
+      Cards widgets are essentially big buttons using an image and some text and are used as extra navigation on home pages. Up to 7 cards are supported.
+    cards:
+      - title: Card 1
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-01.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+      - title: Card 2
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-02.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+      - title: Card 3
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-03.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+      - title: Card 4
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-01.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+      - title: Card 5
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-02.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+      - title: Card 6
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-03.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+      - title: Card 7
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-01.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+  - type: cards
+    featured: true
+    title: Featured Cards Widgets
+    lead: |
+      Cards widgets can also have a "featured" property which will make the first card stand out more.
+    cards:
+      - title: Card 1 - featured
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-01.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+      - title: Card 2
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-02.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+      - title: Card 3
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-03.jpg"
+        imagealt: "A super informative description"
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+
+
+    
 inlinectas:
   - title: Inline Call to action
-    url: /covid-19/
+    url: "/examples/"
     text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, blanditiis.
   - title: Clearing
-    url: /clearing/
+    url: "/examples/"
     text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, blanditiis.
 permalink: /
 ---
