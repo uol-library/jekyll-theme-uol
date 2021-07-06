@@ -17,6 +17,8 @@ sectionmenu:
 mainmenu:
   - title: Examples
     url: /examples/
+  - title: Blog
+    url: /blog/
 ac2:
   - title: Test accordion 3
     content: |
@@ -36,17 +38,18 @@ related:
   items:
     - title: Introduction
       links:
-        - title: Theme Configuration
-          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Theme-configuration
+        - title: Theme Overview
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki
         - title: Menus
           url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Menus
-        - title: Page Templates
+    - title: Page Templates
+        - title: Templates Overview
           url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Page-templates
-    - title: Introduction
-      links:
-        - title: Theme Configuration
-          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Theme-configuration
-        - title: Menus
-          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Menus
-        - title: Page Templates
-          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Page-templates
+        - title: Home page
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Home-page
+        - title: Page
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Page
+        - title: Post
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Post
+        - title: List
+          url: https://github.com/peteredwards/uol-jekyll-theme/wiki/List
