@@ -43,6 +43,7 @@ related:
         - title: Menus
           url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Menus
     - title: Page Templates
+      links:
         - title: Templates Overview
           url: https://github.com/peteredwards/uol-jekyll-theme/wiki/Page-templates
         - title: Home page
