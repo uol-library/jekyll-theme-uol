@@ -15,6 +15,7 @@ description: > # this means to ignore newlines until "show_excerpts:"
   Write a description for the site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+
 google_analytics: "GTM-WJPZM2T" # set to Google Tag manager ID
 
 # contact information
@@ -52,7 +53,7 @@ paginate_path: "/blog/page:num/"
 show_excerpts: true
 # Date format - this is overridden in post-list-item.html
 date_format: "%A %-d %b, %Y"
-
+permalink: pretty
 
 plugins:
  - jekyll-feed

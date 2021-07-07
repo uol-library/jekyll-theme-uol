@@ -14,8 +14,6 @@ sectionmenu:
       url: /examples/quotes/
     - title: Accordions
       url: /examples/accordion/
-    - title : Banners
-      url: /examples/banner/
     - title: Tables
       url: /examples/tables/
 mainmenu:

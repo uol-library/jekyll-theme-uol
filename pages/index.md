@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: Home page example
 quicklinks:
   - title: "Students"
     items:
@@ -279,12 +279,12 @@ banners:
     text: "This page showcases the different menus and content configurations which are availalbe in the home page template of this theme."
     linkurl: "/examples/"
     linktext: "View other examples"
-  - title: "Lorem Ipsum Dolor sit Amet Consectetural"
+  - title: "This is an example home page"
     imageurl: "/assets/img/placeholders/banner-02.jpg"
     imagealt: "University campus"
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellendus necessitatibus harum quo, nemo magni, dolorem natus atque provident suscipit itaque sit perspiciatis!"
+    text: "This page showcases the different menus and content configurations which are availalbe in the home page template of this theme."
     linkurl: "/examples/"
-    linktext: "Some call to action"
+    linktext: "View other examples"
 widgets:
   - type: content
     title: Content Widget
@@ -292,10 +292,12 @@ widgets:
     content: |
       The home page template has a different structure to standard pages and is made up entirely of widgets.
 
-      Widgets can be specified in a yaml data file or in the frontmatter of pages - this widget is specified in the frontmatter of this page.
+      You can add HTML to content widgets, such as embed code for youtube:
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NcWibP5JA_E" title="YouTube video player - students staying safe at the University of Leeds" fram
   - type: featured
     title: Featured Content Widget
-    lead: Featured Content widgets have additional styling and are presented in columns
+    lead: Featured Content widgets have additional styling and contain an image.
     image:
       title: Image
       url: /assets/img/placeholders/banner-01.jpg
@@ -319,37 +321,37 @@ widgets:
         link: /examples/
         imageurl: "/assets/img/placeholders/banner-01.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+        content: "This is a short piece of text for Card 1."
       - title: Card 2
         link: /examples/
         imageurl: "/assets/img/placeholders/banner-02.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+        content: "This is a short piece of text for Card 2."
       - title: Card 3
         link: /examples/
         imageurl: "/assets/img/placeholders/banner-03.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+        content: "This is a short piece of text for Card 3."
       - title: Card 4
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-01.jpg"
+        imageurl: "/assets/img/placeholders/banner-04.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+        content: "This is a short piece of text for Card 4."
       - title: Card 5
+        link: /examples/
+        imageurl: "/assets/img/placeholders/banner-05.jpg"
+        imagealt: "A super informative description"
+        content: "This is a short piece of text for Card 5."
+      - title: Card 6
         link: /examples/
         imageurl: "/assets/img/placeholders/banner-02.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
-      - title: Card 6
-        link: /examples/
-        imageurl: "/assets/img/placeholders/banner-03.jpg"
-        imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+        content: "This is a short piece of text for Card 6."
       - title: Card 7
         link: /examples/
         imageurl: "/assets/img/placeholders/banner-01.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+        content: "This is a short piece of text for Card 7."
   - type: cards
     featured: true
     title: Featured Cards Widgets
@@ -360,25 +362,22 @@ widgets:
         link: /examples/
         imageurl: "/assets/img/placeholders/banner-01.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+        content: "This is a short piece of text for Card 1."
       - title: Card 2
         link: /examples/
         imageurl: "/assets/img/placeholders/banner-02.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
+        content: "This is a short piece of text for Card 2."
       - title: Card 3
         link: /examples/
         imageurl: "/assets/img/placeholders/banner-03.jpg"
         imagealt: "A super informative description"
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada in lorem eu cursus. Duis id ipsum tortor. Suspendisse imperdiet purus id varius tempus. In ac pulvinar elit, at tempus metus."
-
-
-    
+        content: "This is a short piece of text for Card 3."
 inlinectas:
-  - title: Inline Call to action
+  - title: Inline Call to action 1
     url: "/examples/"
     text: Calls to action can be added to the top of the page.
-  - title: Inline Call to action
+  - title: Inline Call to action 2
     url: "/examples/"
     text: Calls to action can be added to the top of the page.
 permalink: /
