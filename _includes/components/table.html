@@ -2,7 +2,7 @@
 {% assign tdata = include.tabledata %}
 {% assign sortable = include.sortablecols | split: "," %}
 {% assign nr = tdata | size %}
-{% if caption != "" && nr > 0 %}
+{% if caption != "" and nr > 0 %}
 <h2 class="uol-index-table-caption">{{ caption | escape }}</h2>
 <table class="uol-index-table js-uolTableStackable">
 {% for row in tdata %}
