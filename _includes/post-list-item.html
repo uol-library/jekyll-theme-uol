@@ -19,7 +19,7 @@
                 <div class="uol-results-items__item__meta__group">
                     <dt class="uol-results-items__item__meta__label">Published</dt>
                     <dd class="uol-results-items__item__meta__data">
-                        {{ postcontent.date | format: datefmt }}
+                        {{ postcontent.date | date: datefmt }}
                     </dd>
                 </div>
                 {% if postcontent.categories.size > 0 %}
@@ -43,9 +43,9 @@
             <p class="uol-results-items__item__summary">{{ postcontent.excerpt | strip_html }}</p>
         </div>
 
-        {% if postcontent.image && postcontent.imagealt %}
+        {% if postcontent.imageurl and postcontent.imagealt %}
         <div class="uol-results-items__item__image-container">
-            <img class="uol-results-items__item__img" src="{{ postcontent.image | absolute_url }}" alt="{{ postcontent.imagealt | escape }}">
+            <img class="uol-results-items__item__img" src="{{ postcontent.imageurl | absolute_url }}" alt="{{ postcontent.imagealt | escape }}">
         </div>
         {% endif %}
     </article>
