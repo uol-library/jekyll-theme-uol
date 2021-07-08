@@ -29,7 +29,7 @@ Images can be included in content by using Markdown syntax:
 ```
 ![Image alt text](/imageurl.jpg)
 ```
-For more control over the output, you can use an include file - this method is better because it uses the correct HTML markup and you can also add a caption to the image. For example the following code snippet:
+For more control over the output, you can use a component - this method is better because it uses the correct HTML markup and you can also add a caption to the image. For example the following code snippet:
 ```
 {% raw %}
 {% include components/image.html url="/assets/img/placeholders/banner-02.jpg" alt="The Fine Art Building" caption="The Fine Art Building - photograph &copy; University of Leeds" %}
@@ -41,25 +41,25 @@ Produces this:
 
 Images should always fill the width of the content, so should be at least 1000px wide.
 
-## Quotations
+## Quotes
 
 Quotes can be added to text using normal markdown syntax:
 ```
 > This is a quote!
 ```
-Produces:
+Produces this:
 
 > This is a quote!
 
-For more control over the output, you can use an include file - for example:
+For more control over the output, you can use a component - for example:
 ```
 {% raw %}
-{% include components/quote.html content="This is a regular block quote with citation and link" cite="Andrew Lansley" citeurl="/examples/" %}
+{% include components/quote.html content="I think Universities are uniquely positioned to really help change the world" cite="Simone Buitendijk" citeurl="https://www.youtube.com/watch?v=3fdtEB88Mmk" %}
 {% endraw %}
 ```
 Produces this:
 
-{% include components/quote.html content="This is a regular block quote with citation and link" cite="Andrew Lansley" citeurl="/examples/" %}
+{% include components/quote.html content="I think Universities are uniquely positioned to really help change the world" cite="Simone Buitendijk" citeurl="https://www.youtube.com/watch?v=3fdtEB88Mmk" %}
 
 ## Accordions
 
