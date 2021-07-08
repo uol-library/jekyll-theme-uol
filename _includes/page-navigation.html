@@ -1,0 +1,16 @@
+{% if page.previous.url or page.next.url %}
+<nav class="uol-page-nav" aria-label="Pagination">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url | absolute_url}}" class="uol-page-nav__item uol-page-nav__item--prev">
+        <span class="uol-page-nav__item__identifier">Previous page</span>
+        <span class="uol-page-nav__item__title">{{ page.previous.title }}</span>
+    </a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{ page.next.url | absolute_url}}" class="uol-page-nav__item uol-page-nav__item--next">
+        <span class="uol-page-nav__item__identifier">Next page</span>
+        <span class="uol-page-nav__item__title">{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+</nav>
+{% endif %}

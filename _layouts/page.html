@@ -16,6 +16,15 @@ layout: default
         </div>
         <div class="uol-page__content">
           <div class="uol-rich-text">
+            {% if page.imageurl and page.imagealt %}
+            <figure class="uol-featured-image">
+                <img class="uol-featured-image__img" src="{{ page.imageurl | absolute_url }}" alt="{{ page.imagealt | escape }}">
+            </figure>
+            {% endif %}
+            <div class="uol-rich-text{% if page.lead %} uol-rich-text--with-lead{% endif %}">
+            {% if page.lead %}
+                <p>{{ page.lead | strip_html }}</p>
+            {% endif %}
             {{ content | markdownify }}
           </div>
         </div>
