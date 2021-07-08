@@ -2,7 +2,7 @@
 layout: post
 title: Wonder, fun and discovery at Be Curious 2021
 description: Interact with Antarctic explorers, design your own version of Leeds’ future, explore the fascinating uses of magnets and lasers – all this and more are featured in Be Curious 2021.
-category: Research and Innovation
+categories: Research Innovation
 imageurl: /assets/img/placeholders/blog-04.jpg
 imagealt: Be Curious 2021
 datafile: examples

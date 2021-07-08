@@ -25,7 +25,7 @@ Both pages and posts can contain **Components**, which allow editors to include 
 
 ## Images
 
-Images can be included in content either by using Markdown syntax:
+Images can be included in content by using Markdown syntax:
 ```
 ![Image alt text](/imageurl.jpg)
 ```
