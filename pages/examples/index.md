@@ -61,14 +61,6 @@ Produces this:
 
 {% include components/quote.html content="This is a regular block quote with citation and link" cite="Andrew Lansley" citeurl="/examples/" %}
 
-{% include components/quote.html content="This is a right-aligned pull quote" align="right" type="pull" %}
-This method also allows you to take advantage of pull quotes which align to the right and left on larger screens. The following examples show how left and right aligned pull quotes work. In each case, some additional parameters are added to the include statement like this:
-{% include components/quote.html content="This is a left-aligned pull quote" align="left" type="pull" %}
-```
-{% raw %}
-{% include components/quote.html content="This is a right-aligned pull quote" align="right" type="pull" %}
-{% endraw %}
-```
 ## Accordions
 
 Accordions can be loaded using data in the page front matter - here we are using `page.accordions`.
