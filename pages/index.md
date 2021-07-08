@@ -294,7 +294,7 @@ widgets:
 
       You can add HTML to content widgets, such as embed code for youtube:
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NcWibP5JA_E" title="YouTube video player - students staying safe at the University of Leeds" fram
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NcWibP5JA_E" title="YouTube video player - students staying safe at the University of Leeds"></iframe>
   - type: featured
     title: Featured Content Widget
     lead: Featured Content widgets have additional styling and contain an image.
@@ -380,6 +380,70 @@ inlinectas:
   - title: Inline Call to action 2
     url: "/examples/"
     text: Calls to action can be added to the top of the page.
+footermenus: 
+  - title: "Study and Courses"
+    items:
+      - url: "/examples/"
+        title: "Undergraduate"
+      - url: "/examples/"
+        title: "Masters courses"
+      - url: "/examples/"
+        title: "Research degrees with very long titles that wrap over two lines like this one its very very long"
+      - url: "/examples/"
+        title: "International"
+      - url: "/examples/"
+        title: "Course search"
+  - title: "About us"
+    items:
+      - url: "/examples/"
+        title: "Campus map"
+      - url: "/examples/"
+        title: "Our heritage"
+      - url: "/examples/"
+        title: "Faculties"
+      - url: "/examples/"
+        title: "Governance"
+      - url: "/examples/"
+        title: "Values and responsibility"
+      - url: "/examples/"
+        title: "Equality"
+      - url: "/examples/"
+        title: "Executive team"
+      - url: "/examples/"
+        title: "News"
+      - url: "/examples/"
+        title: "Events"
+  - title: "Quicklinks and contacts"
+    items:
+      - url: "/examples/"
+        title: "Jobs"
+      - url: "/examples/"
+        title: "Term dates"
+      - url: "/examples/"
+        title: "Services A-Z"
+      - url: "/examples/"
+        title: "Library"
+      - url: "/examples/"
+        title: "Alumni"
+      - url: "/examples/"
+        title: "Press"
+      - url: "/examples/"
+        title: "VideoLeeds"
+      - url: "/examples/"
+        title: "Staff A-Z"
+      - url: "/examples/"
+        title: "Contacts"
+      - url: "/examples/"
+        title: "Coronavirus"
+footerinfo:
+  - url: "/examples/"
+    title: "Terms and conditions"
+  - url: "/examples/"
+    title: "Accessibility"
+  - url: "/examples/"
+    title: "Privacy and cookies"
+  - url: "/examples/"
+    title: "Freedom of information"
 permalink: /
 ---
 
