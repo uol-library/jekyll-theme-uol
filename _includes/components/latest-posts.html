@@ -16,7 +16,7 @@
                 <p>{{ include.content.lead | strip_html }}</p>
             </div>
             {% endif %}
-            {% if include.content.link %}
+            {% if include.content.showlink %}
             <a class="uol-widget__link" href="{{ "/blog/" | absolute_url }}">View all posts</a>
             {% endif %}
         </div>
@@ -27,12 +27,12 @@
           {% assign numberposts = include.content.number %}
         {% endif %}
         <div class="uol-widget__content">
-            <ul class="uol-cards  uol-cards--count-{{ numberposts }} uol-cards--image-layout" role="list">
+            <ul class="uol-cards  uol-cards--count-{{ numberposts }}{% if include.content.showimage %} uol-cards--image-layout{% endif %}" role="list">
             {% for post in site.posts %}
               {% if forloop.index > numberposts %}
                 {% break %}
               {% endif %}
-              {% include components/post-card-item.html content=post excerpt=include.content.excerpt image=include.content.image %}
+              {% include components/post-card-item.html content=post showexcerpt=include.content.showexcerpt showimage=include.content.showimage %}
             {% endfor %}
             </ul>
         </div>

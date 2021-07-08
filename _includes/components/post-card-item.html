@@ -9,7 +9,7 @@
   {% else %}{% assign datefmt = "%A %-dth %b, %Y" %}
 {% endcase %}
 
-<li class="uol-cards__card {% if postcontent.image and postcontent.imagealt %}uol-cards__card--with-image{% endif %}" role="listitem">
+<li class="uol-cards__card{% if postcontent.imageurl and postcontent.imagealt and include.showimage %} uol-cards__card--with-image{% else %} uol-cards__card--without-image{% endif %}" role="listitem">
     <div class="uol-cards__card__text-wrapper">
         <h3 class="uol-cards__card__title">
             <a class="uol-cards__card__link" href="{{ postcontent.url | absolute_url }}">
@@ -17,13 +17,13 @@
             </a>
         </h3>
         <time class="uol-cards__card__date" datetime="{{ postcontent.date | date_to_xmlschema }}">{{ postcontent.date | date: datefmt }}</time>
-        {% if include.excerpt %}
+        {% if include.showexcerpt %}
         <p class="uol-cards__card__text">{{ postcontent.excerpt | strip_html }}</p>
         {% endif %}
     </div>
-    {% if postcontent.image and postcontent.imagealt and include.image %}
+    {% if postcontent.imageurl and postcontent.imagealt and include.showimage %}
     <div class="uol-cards__card__image-wrapper">
-        <img class="uol-cards__card__image" src="{{ postcontent.image | absolute_url }}" alt="{{ postcontent.imagealt | escape }}" />
+        <img class="uol-cards__card__image" src="{{ postcontent.imageurl | absolute_url }}" alt="{{ postcontent.imagealt | escape }}" />
     </div>
     {% endif %}
 </li>

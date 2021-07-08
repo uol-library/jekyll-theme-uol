@@ -1,14 +1,14 @@
 {% assign ps = page.sectionmenu.items | size %}
 {% assign ds = site.data[page.datafile].sectionmenu.items | size %}
 {% assign ss = site.data.navigation.sections[page.sectionmenu].items | size %}
-{% if page.sectionmenu && ps > 0 %}
+{% if page.sectionmenu and ps > 0 %}
   {% assign sectionmenu = page.sectionmenu %}
-{% elsif site.data[page.datafile].sectionmenu && ds > 0 %}
+{% elsif site.data[page.datafile].sectionmenu and ds > 0 %}
   {% assign sectionmenu = site.data[page.datafile].sectionmenu %}
-{% elsif site.data.navigation.sections[page.sectionmenu] && ss > 0 %}
+{% elsif site.data.navigation.sections[page.sectionmenu] and ss > 0 %}
   {% assign sectionmenu = site.data.navigation.sections[page.sectionmenu] %}
 {% endif %}
-{% if sectionmenu != empty %}
+{% if sectionmenu %}
 <nav class="uol-section-nav" aria-label="Section navigation">
     <h2 class="uol-section-nav__title">
         <span class="uol-section-nav__title__intro">In this section</span>

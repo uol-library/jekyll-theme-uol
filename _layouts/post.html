@@ -52,9 +52,9 @@ layout: default
         </div>
 
         <div class="uol-article__content" itemprop="articleBody">
-            {% if page.image and page.imagealt %}
+            {% if page.imageurl and page.imagealt %}
             <figure class="uol-featured-image">
-                <img class="uol-featured-image__img" src="{{ page.image | absolute_url }}" alt="{{ page.imagealt | escape }}">
+                <img class="uol-featured-image__img" src="{{ page.imageurl | absolute_url }}" alt="{{ page.imagealt | escape }}">
             </figure>
             {% endif %}
             <div class="uol-rich-text{% if page.lead %} uol-rich-text--with-lead{% endif %}">
