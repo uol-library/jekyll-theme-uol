@@ -5,17 +5,6 @@ inlinectas:
   - title: Clearing
     url: /clearing/
     text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, blanditiis.
-sectionmenu:
-  title: Components
-  items:
-    - title: Images
-      url: /examples/images/
-    - title: Quotes
-      url: /examples/quotes/
-    - title: Accordions
-      url: /examples/accordion/
-    - title: Tables
-      url: /examples/tables/
 mainmenu:
   - title: Examples
     url: /examples/

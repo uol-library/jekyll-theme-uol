@@ -308,9 +308,9 @@ widgets:
     number: 6
     title: Latest posts
     lead: You can display latest posts with or without images and excerpts - the maximum supported is 6.
-    link: true
-    image: true
-    excerpt: true
+    showlink: true
+    showimage: true
+    showexcerpt: true
   - type: cards
     featured: false
     title: Cards Widgets

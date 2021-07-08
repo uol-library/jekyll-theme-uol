@@ -5,6 +5,7 @@ description: Europe’s largest medieval studies conference is back for 2021 –
 category: Arts and Culture
 imageurl: /assets/img/placeholders/blog-03.jpg
 imagealt: A blurry close up of an old manuscript
+datafile: examples
 lead: Europe’s largest medieval studies conference is back for 2021 – and this year’s event focuses on "climates".
 ---
 
