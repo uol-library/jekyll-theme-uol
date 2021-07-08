@@ -81,87 +81,30 @@
 #      - title: 
 #        url: 
 
-footer: 
-  - title: "Study and Courses"
-    items:
-      - url: "https://leeds.ac.uk/footer-link-undergraduate"
-        title: "Undergraduate"
-      - url: "https://leeds.ac.uk/footer-link-masters-courses"
-        title: "Masters courses"
-      - url: "https://leeds.ac.uk/footer-link-very-long-title"
-        title: "Research degrees with very long titles that wrap over two lines like this one its very very long"
-      - url: "https://leeds.ac.uk/footer-international"
-        title: "International"
-      - url: "https://leeds.ac.uk/footer-course-search"
-        title: "Course search"
-  - title: "About us"
-    items:
-      - url: "https://leeds.ac.uk/footer-campus-map"
-        title: "Campus map"
-      - url: "https://leeds.ac.uk/footer-heritage"
-        title: "Our heritage"
-      - url: "https://leeds.ac.uk/footer-faculties"
-        title: "Faculties"
-      - url: "https://leeds.ac.uk/footer-governance"
-        title: "Governance"
-      - url: "https://leeds.ac.uk/footer-values"
-        title: "Values and responsibility"
-      - url: "https://leeds.ac.uk/footer-equality"
-        title: "Equality"
-      - url: "https://leeds.ac.uk/footer-executive"
-        title: "Executive team"
-      - url: "https://leeds.ac.uk/footer-news"
-        title: "News"
-      - url: "https://leeds.ac.uk/footer-events"
-        title: "Events"
-  - title: "Quicklinks and contacts"
-    items:
-      - url: "https://leeds.ac.uk/footer-jobs"
-        title: "Jobs"
-      - url: "https://leeds.ac.uk/footer-term-dates"
-        title: "Term dates"
-      - url: "https://leeds.ac.uk/footer-services-a-z"
-        title: "Services A-Z"
-      - url: "https://leeds.ac.uk/footer-library"
-        title: "Library"
-      - url: "https://leeds.ac.uk/footer-alumni"
-        title: "Alumni"
-      - url: "https://leeds.ac.uk/footer-press"
-        title: "Press"
-      - url: "https://leeds.ac.uk/footer-video-leeds"
-        title: "VideoLeeds"
-      - url: "https://leeds.ac.uk/footer-staff-a-z"
-        title: "Staff A-Z"
-      - url: "https://leeds.ac.uk/footer-contacts"
-        title: "Contacts"
-      - url: "https://leeds.ac.uk/footer-coronavirus"
-        title: "Coronavirus"
+# Footer menus are located at the bottom of each page and there can be up to
+# three configured here
 
-footerinfo:
-  - url: "https://leeds.ac.uk/terms-and-conditions"
-    title: "Terms and conditions"
-  - url: "https://leeds.ac.uk/accessibility"
-    title: "Accessibility"
-  - url: "https://leeds.ac.uk/privacy"
-    title: "Privacy and cookies"
-  - url: "https://leeds.ac.uk/freedom-of-information"
-    title: "Freedom of information"
+#footermenus: 
+#  - title: 
+#    items:
+#      - url: 
+#        title: 
+#  - title:
+#    items:
+#      - url: 
+#        title: 
+#  - title:
+#    items:
+#      - url: 
+#        title: 
 
+# Footer Information consists of links to key pages on the site.
+# Each site should have its own Accessibility and Privacy pages
+# and may well have a Terms and Conditions page and Copyright
+# Page. You can also link to the University FOI page here.
 
-related:
-  students:
-    title: Related content
-    items:
-      - title: Meet our students
-        link: /meet-our-students
-        text: Hear from some of our undergraduates about some of the exciting things they&#39;ve done to make the most of their student experience Hear from some of our undergraduates about some of the exciting things.
-      - title: Meet our staff
-        link: /meet-our-staff
-        text: We understand that applicants and offer holders may have concerns about the ongoing coronavirus (COVID-19) situation and your plans to study with us at Leeds.
-      - title: Admissions Enquiries
-        links:
-          - title: +44 (0)113 3433213
-            url: tel:+441133433212
-          - title: Study@leeds.ac.uk
-            url: mailto:Study@leeds.ac.uk
-                
+#footerinfo:
+#  - url: 
+#    title: 
+#  - url: "https://leeds.ac.uk/freedom-of-information"
+#    title: "Freedom of information"

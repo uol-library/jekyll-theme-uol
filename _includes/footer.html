@@ -1,10 +1,15 @@
+    {% if page.footermenus %}
+      {% assign footermenu = page.footermenus %}
+    {% elsif site.data.navigation.footermenus %}
+      {% assign footermenu = site.data.navigation.footermenus %}
+    {% endif %}
     <footer class="uol-site-footer-outer">
       <div class="uol-site-footer uol-content-container">
-        {% if site.data.navigation.footer %}
+        {% if footermenu %}
         <div class="uol-site-footer__nav-container">
           <nav class="uol-site-footer__nav-outer" aria-labelledby="footer-nav-title">
             <h2 class="uol-site-footer__title" id="footer-nav-title">Footer navigation</h2>
-            {% for menu in site.data.navigation.footer %}
+            {% for menu in footermenu %}
             <div class="uol-site-footer__nav">
               <nav class="nav-list-group" aria-label="{{ menu.title | escape }}">
                 <h3 class="nav-list-group__title">{{ menu.title }}</h3>
@@ -24,14 +29,20 @@
         
         {% include address.html %}
 
+
+    {% if page.footerinfo %}
+      {% assign footerinformation = page.footerinfo %}
+    {% elsif site.data.navigation.footerinfo %}
+      {% assign footerinformation = site.data.navigation.footerinfo %}
+    {% endif %}
         <div class="uol-site-footer__site-information-container">
           <nav class="footer-site-information" aria-label="Site information">
             <h2 class="hide-accessible">Site information</h2>
             <ul class="footer-site-information__list">
               <li class="footer-site-information__item">&copy; 2021 University of Leeds</li>
-              {% assign hasfooterinfo = site.data.navigation.footerinfo | size %}
+              {% assign hasfooterinfo = footerinformation | size %}
               {% if hasfooterinfo > 0 %}
-                {% for link in site.data.navigation.footerinfo %}
+                {% for link in footerinformation %}
               <li class="footer-site-information__item"><a class="footer-site-information__link" href="{{ link.url | absolute_url }}">{{ link.title }}</a></li>
                 {% endfor %}
               {% endif %}
