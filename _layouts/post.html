@@ -17,6 +17,7 @@ layout: default
         <div class="uol-article__head">
             <header class="page-heading">
                 <h1 class="page-heading__title" itemprop="name headline">{{ page.title | escape }}</h1>
+                {% if page.categories or page.tags or page.author or page.date %}
                 <dl class="page-heading__meta">
                   {% if page.categories.size > 0 %}
                     <div class="page-heading__meta__group">
@@ -42,12 +43,14 @@ layout: default
                       {% endfor %}
                     </div>
                   {% endif %}
-          
+                  {% if page.date %}
                     <div class="page-heading__meta__group">
                         <dt class="page-heading__meta__label">Published</dt>
                         <dd class="page-heading__meta__data" itemprop="datePublished"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: datefmt }}</time></dd>
                     </div>
+                  {% endif %}
                 </dl>
+                {% endif %}
             </header>
         </div>
 
