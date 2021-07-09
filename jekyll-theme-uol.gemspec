@@ -12,5 +12,5 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|LICENSE|README\.md|_config\.yml|404\.html)!i) }
 
-  spec.add_runtime_dependency "jekyll", "~> 3.9.0"
+  spec.add_runtime_dependency "jekyll", '~> 3.9', '>= 3.9.0'
 end
