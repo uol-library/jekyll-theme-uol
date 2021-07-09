@@ -6,7 +6,7 @@
 #  /___/_/\__/\__/ /___/\__/\__/\__/_/_//_/\_, /___/
 #                                         /___/
 #
-theme: 
+theme: jekyll-theme-uol
 title: Site title
 author:
   name: peteredwards
