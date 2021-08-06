@@ -1,8 +1,28 @@
 ---
 layout: default
 ---
+{% include components/banner.html %}
+{% include section-menu.html %}
+  <main id="main" class="uol-content-container">
+    {% include breadcrumbs.html %}
+    <div class="uol-col-container">
+      <div class="uol-side-nav-container"></div>
+      <div class="uol-page">
+        <div class="uol-page__head">
+          <header class="page-heading">
+            <h1 class="page-heading__title">{{ page.title }}</h1>
+          </header>
+        </div>
+        <div class="uol-page__content">
+          <div id="search-results" class="uol-results-items"></div>
+        </div>
+      </div>
+    </div>
 
-<div id="search-results" class="uol-results-items"></div>
+    {% include section-menu-ctas.html %}
+
+  </main>
+
 
 
 
