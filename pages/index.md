@@ -274,13 +274,13 @@ related:
           type: email
 banners:
   - title: "This is an example home page"
-    imageurl: "/assets/img/placeholders/banner-01.jpg"
+    imageurl: "/assets/images/placeholders/banner-01.jpg"
     imagealt: "University campus"
     text: "This page showcases the different menus and content configurations which are availalbe in the home page template of this theme."
     linkurl: "/examples/"
     linktext: "View other examples"
   - title: "This is an example home page"
-    imageurl: "/assets/img/placeholders/banner-02.jpg"
+    imageurl: "/assets/images/placeholders/banner-02.jpg"
     imagealt: "University campus"
     text: "This page showcases the different menus and content configurations which are availalbe in the home page template of this theme."
     linkurl: "/examples/"
@@ -300,7 +300,7 @@ widgets:
     lead: Featured Content widgets have additional styling and contain an image.
     image:
       title: Image
-      url: /assets/img/placeholders/banner-01.jpg
+      url: /assets/images/placeholders/banner-01.jpg
       caption: Dame Barbara Hepwoth
     content: |
       Featured content widgets are ideal for showcasing parts of the site.
@@ -319,37 +319,37 @@ widgets:
     cards:
       - title: Card 1
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-01.jpg"
+        imageurl: "/assets/images/placeholders/banner-01.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 1."
       - title: Card 2
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-02.jpg"
+        imageurl: "/assets/images/placeholders/banner-02.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 2."
       - title: Card 3
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-03.jpg"
+        imageurl: "/assets/images/placeholders/banner-03.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 3."
       - title: Card 4
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-04.jpg"
+        imageurl: "/assets/images/placeholders/banner-04.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 4."
       - title: Card 5
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-05.jpg"
+        imageurl: "/assets/images/placeholders/banner-05.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 5."
       - title: Card 6
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-02.jpg"
+        imageurl: "/assets/images/placeholders/banner-02.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 6."
       - title: Card 7
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-01.jpg"
+        imageurl: "/assets/images/placeholders/banner-01.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 7."
   - type: cards
@@ -360,17 +360,17 @@ widgets:
     cards:
       - title: Card 1 - featured
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-01.jpg"
+        imageurl: "/assets/images/placeholders/banner-01.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 1."
       - title: Card 2
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-02.jpg"
+        imageurl: "/assets/images/placeholders/banner-02.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 2."
       - title: Card 3
         link: /examples/
-        imageurl: "/assets/img/placeholders/banner-03.jpg"
+        imageurl: "/assets/images/placeholders/banner-03.jpg"
         imagealt: "A super informative description"
         content: "This is a short piece of text for Card 3."
 inlinectas:
