@@ -10,6 +10,15 @@ The [University of Leeds Design System](https://designsystem.leeds.ac.uk) contai
 
 ## Change log
 
+### 0.0.6 (15 October 2021)
+
+* Updated Design System assets to v0.2.18
+* Updated HTML for local masthead
+
+### 0.0.5 (5 October 2021)
+
+* Updated Design System assets to v0.2.17
+
 ### 0.0.4 (23 July 2021)
 
 * Remove GEM based theme from rubygems - some featured of the theme weren't working as I expected.
