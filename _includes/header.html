@@ -24,14 +24,14 @@
         
       </header>
 
-      <header class="uol-header-local-header">
-        <h1 class="uol-header-local-header__site-name">
-            <a href="{{ "/" | absolute_url }}">
-                {{ site.title }}
-                <span class="hide-accessible">homepage</span>
-            </a>
-        </h1>
-      </header>
+      <div class="uol-header-local-masthead">
+        <div class="uol-header-local-masthead-inner">
+          <a class="uol-header-local-masthead__link" href="{{ "/" | absolute_url }}" {% if page.url == "/" %}aria-current="true"{% endif %}>
+            {{ site.title }}
+            <span class="hide-accessible">homepage</span>
+          </a>
+        </div>
+      </div>
 
       {% include header-mainnav.html %}
 

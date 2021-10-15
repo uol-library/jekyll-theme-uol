@@ -3,7 +3,7 @@ layout: post
 title: Learn about climate in the Middle Ages at ‘Medieval Glastonbury’ 
 description: Europe’s largest medieval studies conference is back for 2021 – and this year’s event focuses on climates.
 categories: Arts Culture
-imageurl: /assets/img/placeholders/blog-03.jpg
+imageurl: /assets/images/placeholders/blog-03.jpg
 imagealt: A blurry close up of an old manuscript
 datafile: examples
 lead: Europe’s largest medieval studies conference is back for 2021 – and this year’s event focuses on "climates".

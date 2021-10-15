@@ -3,7 +3,7 @@ layout: post
 title: New treatment options for deadliest of cancers
 description: A new way to target a mutant protein which can cause the deadliest of cancers in humans has been uncovered by scientists at the University of Leeds.
 category: Health
-imageurl: /assets/img/placeholders/blog-01.jpg
+imageurl: /assets/images/placeholders/blog-01.jpg
 imagealt: Hospital doctor giving results to a patient
 datafile: examples
 lead: A new way to target a mutant protein which can cause the deadliest of cancers in humans has been uncovered by scientists at Leeds.

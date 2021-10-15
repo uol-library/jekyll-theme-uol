@@ -3,7 +3,7 @@ layout: post
 title: Securing decent living standards for all while cutting energy use
 description: Fundamental changes in our economies are required to secure decent living standards for all in the struggle against climate breakdown, according to new research.
 category: Environment
-imageurl: /assets/img/placeholders/blog-02.jpg
+imageurl: /assets/images/placeholders/blog-02.jpg
 imagealt: Landscape featuring an electricity pylon.
 datafile: examples
 lead: Fundamental changes in our economies are required to secure decent living standards for all in the struggle against climate breakdown, according to new research.
