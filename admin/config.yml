@@ -1,0 +1,319 @@
+backend:
+  name: 'github'
+  repo: 'peteredwards/uol-jekyll-netlify'
+  publish_mode: 'editorial_workflow'
+  branch: 'main'
+  site_domain: 'silly-fermat-52243b.netlify.com'
+
+media_folder: 'uploads'
+
+collections:
+  - name: 'landing'
+    label: 'Landing Pages'
+    folder: 'pages/'
+    filter: {field: 'layout', value: 'home'}
+    create: true
+    preview: false
+    slug: '{{slug}}'
+    fields:
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'home'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Index'
+        name: 'index'
+        widget: 'boolean'
+        default: true
+      - label: 'URL'
+        name: 'permalink'
+        widget: 'string'
+        pattern: ['[a-z\-0-9\/]+', 'Please use lower case letters, hyphens and forward slashes only']
+      - label: 'Banner'
+        name: 'Banner'
+        widget: 'list'
+        summary: '{{fields.title}}'
+        label_singular: 'banner iamge'
+        collapsed: true
+        fields:
+          - label: 'Image'
+            name: 'imageurl'
+            widget: 'Image'
+            choose_url: false
+            maedia_library:
+              config:
+                multiple: false
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Alternate text'
+            name: 'imagealt'
+            widget: 'string'
+          - label: 'Text'
+            name: 'text'
+            widget: 'string'
+            required: false
+          - label: 'Link URL'
+            name: 'link'
+            widget: 'string'
+          - label: 'Link text'
+            name: 'linktext'
+            widget: 'string'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
+  - name: 'pages'
+    label: 'Regular Pages'
+    folder: 'pages/'
+    filter: {field: 'layout', value: 'page'}
+    create: true
+    preview: false
+    slug: '{{sectionid}}-{{slug}}'
+    fields:
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'home'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Index'
+        name: 'index'
+        widget: 'boolean'
+        default: true
+      - label: 'URL'
+        name: 'permalink'
+        widget: 'string'
+        pattern: ['[a-z\-0-9\/]+', 'Please use lower case letters, hyphens and forward slashes only']
+      - label: 'Section ID'
+        name: 'sectionid'
+        widget: 'relation'
+        collection: 'navigation'
+        file: '_data/sidebars.yml'
+        value_field: 'sectionmenus.*.sectionid'
+        search_fields: ['sectionmenus.*.sectionid']
+      - label: 'Banner'
+        name: 'Banner'
+        widget: 'list'
+        summary: '{{fields.title}}'
+        label_singular: 'banner iamge'
+        collapsed: true
+        fields:
+          - label: 'Image'
+            name: 'imageurl'
+            widget: 'image'
+            choose_url: false
+            maedia_library:
+              config:
+                multiple: false
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Alternate text'
+            name: 'imagealt'
+            widget: 'string'
+          - label: 'Text'
+            name: 'text'
+            widget: 'string'
+            required: false
+          - label: 'Link URL'
+            name: 'link'
+            widget: 'string'
+          - label: 'Link text'
+            name: 'linktext'
+            widget: 'string'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'post'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Publish Date'
+        name: 'date'
+        widget: 'datetime'
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown' 
+  - name: 'navigation'
+    label: 'Navigation'
+    editor:
+      preview: false
+    files:
+      - label: 'Menus'
+        name: 'menus'
+        file: '_data/navigation.yml'
+        fields:
+          - label: 'Main menu items'
+            name: 'mainmenu'
+            widget: 'list'
+            summary: '{{fields.title}}'
+            label_singular: 'menu item'
+            hint: 'This is the main menu which is above the content area of each page on the site'
+            collapsed: true
+            fields:
+              - label: 'Title'
+                name: 'title'
+                widget: 'string'
+              - label: 'Link'
+                name: 'url'
+                widget: 'string'
+                hint: 'If you add a submenu, the link for this item will be ignored (it will open the submenu)'
+              - label: 'Submenu items'
+                name: 'items'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'submenu item'
+                collapsed: true
+                fields:
+                  - label: 'Title'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
+                  - label: 'Call to action?'
+                    name: 'cta'
+                    widget: 'boolean'
+                    default: false
+                    hint: 'These items will have special formatting applied to them and should always be at the bottom of the submenu'
+          - label: 'Quick Links'
+            name: 'quicklinks'
+            widget: 'list'
+            max: 3
+            label_singular: 'quick links menu'
+            hint: 'Quicklinks are placed in the black header at the top of every page. You can add up to <strong>three</strong> menus here'
+            fields:
+              - label: 'Name'
+                name: 'title'
+                widget: 'string'
+              - label: 'Items'
+                name: 'items'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'Add menu item'
+                collapsed: true
+                fields:
+                  - label: 'Name'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
+          - label: 'Footer menus'
+            name: 'footermenu'
+            widget: 'list'
+            max: 3
+            label_singular: 'footer menu'
+            summary: '{{fields.title}}'
+            hint: 'You can add up to <strong>three</strong> footer menus here'
+            collapsed: true
+            fields:
+              - label: 'Menu Title'
+                name: 'title'
+                widget: 'string'
+              - label: 'Items'
+                name: 'items'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'menu item'
+                collapsed: true
+                fields:
+                  - label: 'Title'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
+          - label: 'Footer links'
+            name: 'footerinfo'
+            widget: 'list'
+            max: 6
+            label_singular: 'footer link'
+            summary: '{{fields.title}}'
+            hint: 'You can add up to <strong>six</strong> links here, including links to FOI, your Privacy page, and your Accessibility page'
+            collapsed: true
+            default:
+              - { title: 'Freedom of information', url: 'https://leeds.ac.uk/freedom-of-information' }
+              - { title: 'Privacy', url: '/privacy/' }
+              - { title: 'Accessibility', url: '/accessibility/' }
+            fields:
+              - label: 'Title'
+                name: 'title'
+                widget: 'string'
+              - label: 'Link'
+                name: 'url'
+                widget: 'string'
+      - label: 'Section sidebar'
+        name: 'sectionmenu'
+        file: '_data/sidebars.yml'
+        fields:
+          - label: 'Section sidebar menus'
+            name: 'sectionmenus'
+            widget: 'list'
+            label_singular: 'sidebar menu'
+            hint: 'The section sidebar menus are located to the left of content on larger screens and form a dropdown on smaller screens. Each section has an ID which can be referenced in pages to include the relevant menu.'
+            collapsed: true
+            summary: '{{fields.sectionid}}'
+            fields:
+              - label: 'Section ID'
+                name: 'sectionid'
+                widget: 'string'
+              - label: 'Menu Items'
+                name: 'items'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'Add menu item'
+                fields:
+                  - label: 'Title'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
+                    hint: 'If you add a submenu, the link for this item will be ignored (it will open the submenu)'
+                  - label: 'Submenu'
+                    name: 'items'
+                    widget: 'list'
+                    summary: '{{fields.title}}'
+                    label_singular: 'Add submenu item'
+                    collapsed: true
+                    fields:
+                      - label: 'Title'
+                        name: 'title'
+                        widget: 'string'
+                      - label: 'Link'
+                        name: 'url'
+                        widget: 'string'
+              - label: 'Calls to action'
+                name: 'ctas'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                label_singular: 'Add CTA'
+                hint: 'These are located under the section menu to the left of content on larger screens and under the page content on smaller screens.'
+                max: 2
+                collapsed: true
+                fields:
+                  - label: 'Title'
+                    name: 'title'
+                    widget: 'string'
+                  - label: 'Link'
+                    name: 'url'
+                    widget: 'string'
+

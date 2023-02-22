@@ -16,7 +16,7 @@ description: >
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
-google_analytics: "GTM-WJPZM2T" # set to Google Tag manager ID
+google_analytics: "" # set to Google Tag manager ID
 
 # contact information
 contact:

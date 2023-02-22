@@ -10,10 +10,13 @@ The [University of Leeds Design System](https://designsystem.leeds.ac.uk) contai
 
 ## Change log
 
+### 0.0.8 (22 February 2023)
+
+* Updated Design System assets to v1.0.9
+
 ### 0.0.7 (10 January 2022)
 
 * Updated Design System assets to v0.2.20
-
 
 ### 0.0.6 (15 October 2021)
 
