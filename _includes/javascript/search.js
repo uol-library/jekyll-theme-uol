@@ -71,7 +71,7 @@ var renderResults = function( results ) {
 	var numResults = results.length;
 	// Check for paging
 	var page = 1;
-	var perPage = 3;
+	var perPage = 10;
 	if (searchParams.has('page')) {
 		page = parseInt(searchParams.get('page'));
 	}
@@ -136,23 +136,22 @@ var renderResults = function( results ) {
 		n.setAttribute( 'aria-label', 'pagination' );
 		var pl = document.createElement( 'ol' );
 		pl.classList.add( 'uol-pagination__list' );
-		var links = {};
+		let links = {};
+		let linkli = document.createElement( 'li' );
+		linkli.classList.add( 'uol-pagination__item' );
 		// First page and previous page links
-		links.first = document.createElement( 'li' );
-		links.first.classList.add( 'uol-pagination__item' );
-		links.prev = document.createElement( 'li' );
-		links.prev.classList.add( 'uol-pagination__item' );
-		links.next = document.createElement( 'li' );
-		links.next.classList.add( 'uol-pagination__item' );
-		links.last = document.createElement( 'li' );
-		links.last.classList.add( 'uol-pagination__item' );
-		// Create disables and action buttons to clone
-		var disabledButton = document.createElement( 'button' );
-		disabledButton.setAttribute( 'type', 'button' );
+		links.first = linkli.cloneNode();
+		links.prev = linkli.cloneNode();
+		links.next = linkli.cloneNode();
+		links.last = linkli.cloneNode();
+		// Create buttons
+		let navButton = document.createElement( 'button' );
+		navButton.setAttribute( 'type', 'button' );
+		navButton.classList.add( 'uol-button', 'uol-icon', 'uol-icon--icon-only', 'uol-pagination__link');
+		let disabledButton = navButton.cloneNode();
 		disabledButton.setAttribute( 'disabled', true );
-		disabledButton.classList.add( 'uol-button','uol-button--primary','uol-icon','uol-icon--icon-only');
-		var actionButton = document.createElement( 'a' );
-		actionButton.classList.add( 'uol-button','uol-button--primary','uol-icon','uol-icon--icon-only');
+		let actionButton = document.createElement( 'a' );
+		actionButton.classList.add( 'uol-button', 'uol-icon', 'uol-icon--icon-only', 'uol-pagination__link' );
 		// First, Previous, Next and Last buttons
 		var firstButton, prevButton, nextButton, lastButton;
 		// First page, no previous or first
@@ -163,6 +162,10 @@ var renderResults = function( results ) {
 			firstButton = actionButton.cloneNode();
 			prevButton  = actionButton.cloneNode();
 		}
+		firstButton.classList.add( 'uol-icon--mdiPageFirst', 'uol-button--primary' );
+		firstButton.appendChild( document.createTextNode( 'First page' ) );
+		prevButton.classList.add( 'uol-icon--mdiArrowLeft', 'uol-button--primary' );
+		prevButton.appendChild( document.createTextNode( 'Previous page' ) );
 		// last page, not next or last
 		if ( ( page * perPage ) >= numResults ) {
 			nextButton = disabledButton.cloneNode();
@@ -171,15 +174,11 @@ var renderResults = function( results ) {
 			nextButton = actionButton.cloneNode();
 			lastButton  = actionButton.cloneNode();
 		}
-		// Finish off the buttons
-		firstButton.classList.add('uol-icon--mdiPageFirst');
-		firstButton.appendChild( document.createTextNode( 'First page' ) );
-		prevButton.classList.add('uol-icon--mdiArrowLeft');
-		prevButton.appendChild( document.createTextNode( 'Previous page' ) );
-		nextButton.classList.add('uol-icon--mdiArrowRight');
+		nextButton.classList.add( 'uol-icon--mdiArrowRight', 'uol-button--primary' );
 		nextButton.appendChild( document.createTextNode( 'Next page' ) );
-		lastButton.classList.add('uol-icon--mdiPageLast');
+		lastButton.classList.add( 'uol-icon--mdiPageLast', 'uol-button--primary' );
 		lastButton.appendChild( document.createTextNode( 'Last page' ) );
+		
 		// Now add links
 		if ( startIndex > 0 ) {
 			searchParams.set('page', 1 );
@@ -215,13 +214,13 @@ var renderResults = function( results ) {
 					continue;
 				}
 			}
-			var pnli = document.createElement('li');
-			pnli.classList.add("uol-pagination__item", "uol-pagination__item--numeric");
+			var pnli = linkli.cloneNode();
+			pnli.classList.add( 'uol-pagination__item--numeric' );
 			if ( pageNo == page ) {
-				pnli.classList.add("uol-pagination__item--current");
+				pnli.classList.add( 'uol-pagination__item--current' );
 			}
-			var pna = document.createElement('a');
-			pna.classList.add("uol-button","uol-button--secondary","uol-icon","uol-icon--icon-only","uol-pagination__link");
+			var pna = actionButton.cloneNode();
+			pna.classList.add( 'uol-button--secondary' );
 			searchParams.set('page', pageNo );
 			pna.setAttribute('href', window.location.href.split('?')[0]+'?'+searchParams.toString());
 			pna.setAttribute('data-number', pageNo);
