@@ -22,8 +22,5 @@ Gem::Specification.new do |spec|
     "wiki_uri"          => "https://github.com/uol-library/jekyll-theme-uol/wiki"
   }
   spec.add_runtime_dependency "jekyll", "~> 3.9", ">= 3.9.0"
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.12", ">= 0.12"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.6", ">= 2.6"
-  spec.add_runtime_dependency "jekyll-paginate", "~> 1.1", ">= 1.1.0"
 
 end
