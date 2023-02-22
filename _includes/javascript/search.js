@@ -163,9 +163,9 @@ var renderResults = function( results ) {
 			prevButton  = actionButton.cloneNode();
 		}
 		firstButton.classList.add( 'uol-icon--mdiPageFirst', 'uol-button--primary' );
-		firstButton.appendChild( document.createTextNode( 'First page' ) );
+		firstButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path fill="#000000" fill-rule="nonzero" d="M18.41,16.59L13.82,12L18.41,7.41L17,6L11,12L17,18L18.41,16.59M6,6H8V18H6V6Z"></path></svg><span class="uol-icon__label">First page</span>';
 		prevButton.classList.add( 'uol-icon--mdiArrowLeft', 'uol-button--primary' );
-		prevButton.appendChild( document.createTextNode( 'Previous page' ) );
+		prevButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path fill="#000000" fill-rule="nonzero" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg><span class="uol-icon__label">Previous page</span>';
 		// last page, not next or last
 		if ( ( page * perPage ) >= numResults ) {
 			nextButton = disabledButton.cloneNode();
@@ -175,9 +175,9 @@ var renderResults = function( results ) {
 			lastButton  = actionButton.cloneNode();
 		}
 		nextButton.classList.add( 'uol-icon--mdiArrowRight', 'uol-button--primary' );
-		nextButton.appendChild( document.createTextNode( 'Next page' ) );
+		nextButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path fill="#000000" fill-rule="nonzero" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg><span class="uol-icon__label">Next page</span>';
 		lastButton.classList.add( 'uol-icon--mdiPageLast', 'uol-button--primary' );
-		lastButton.appendChild( document.createTextNode( 'Last page' ) );
+		lastButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path fill="#000000" fill-rule="nonzero" d="M5.59,7.41L10.18,12L5.59,16.59L7,18L13,12L7,6L5.59,7.41M16,6H18V18H16V6Z"></path> </svg><span class="uol-icon__label">Last page</span>';
 		
 		// Now add links
 		if ( startIndex > 0 ) {
