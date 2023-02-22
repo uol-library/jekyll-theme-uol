@@ -58,8 +58,3 @@ permalink: pretty
 exclude:
   - README.md
   - LICENSE
-
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-paginate

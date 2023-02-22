@@ -1,55 +1,6 @@
 ---
 layout: home
 title: Home page example
-quicklinks:
-  - title: "Students"
-    items:
-      - url: "/examples/"
-        title: "Mobile App"
-      - url: "/examples/"
-        title: "Minerva"
-      - url: "/examples/"
-        title: "For Students"
-      - url: "/examples/"
-        title: "Library"
-      - url: "/examples/"
-        title: "IT"
-      - url: "/examples/"
-        title: "Campus map"
-  - title: "Staff"
-    items:
-      - url: "/examples/"
-        title: "For Staff"
-      - url: "/examples/"
-        title: "Services A-Z"
-      - url: "/examples/"
-        title: "Staff A-Z"
-      - url: "/examples/"
-        title: "Faculties A-Z"
-      - url: "/examples/"
-        title: "Student Education Service"
-      - url: "/examples/"
-        title: "HR"
-      - url: "/examples/"
-        title: "IT"
-      - url: "/examples/"
-        title: "Campus map"
-  - title: "Faculties"
-    items:
-      - url: "/examples/"
-        title: "Faculty of Arts, Humanities and Cultures"
-      - url: "/examples/"
-        title: "Faculty of Biological Sciences"
-      - url: "/examples/"
-        title: "Faculty of Business"
-      - url: "/examples/"
-        title: "Faculty of Engineering and Physical Sciences"
-      - url: "/examples/"
-        title: "Faculty of Environment"
-      - url: "/examples/"
-        title: "Faculty of Medicine and Health"
-      - url: "/examples/"
-        title: "Faculty of Social Sciences"
 mainmenu:
   - title: "Study"
     items:
@@ -294,7 +245,7 @@ widgets:
 
       You can add HTML to content widgets, such as embed code for youtube:
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NcWibP5JA_E" title="YouTube video player - students staying safe at the University of Leeds"></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/6hAUrjUXmGQ" title="YouTube video player - Virtual Campus Tour - University of Leeds"></iframe>
   - type: featured
     title: Featured Content Widget
     lead: Featured Content widgets have additional styling and contain an image.

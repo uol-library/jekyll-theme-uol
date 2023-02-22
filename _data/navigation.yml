@@ -32,7 +32,50 @@
 #  - title: 
 #    items:
 #      - url: 
-#        title: 
+#        title:
+
+# These are the standard quicklinks on the corporate site (as of 22/02/2023)
+quicklinks:
+  - title: "Students"
+    items:
+      - url: "https://minerva.leeds.ac.uk/"
+        title: "Minerva"
+      - url: "https://it.leeds.ac.uk/mobileapps"
+        title: "Mobile app"
+      - url: "https://students.leeds.ac.uk"
+        title: "For Students"
+  - title: "Staff"
+    items:
+      - url: "https://forstaff.leeds.ac.uk"
+        title: "For staff"
+      - url: "https://forstaff.leeds.ac.uk/forstaff/homepage/375/services"
+        title: "Services A-Z"
+      - url: "https://ses.leeds.ac.uk/"
+        title: "Student Education Service"
+  - title: "Faculties"
+    items:
+      - url: "https://ahc.leeds.ac.uk/"
+        title: "Faculty of Arts, Humanities and Cultures"
+      - url: "https://biologicalsciences.leeds.ac.uk/"
+        title: "Faculty of Biological Sciences"
+      - url: "https://business.leeds.ac.uk"
+        title: "Faculty of Business"
+      - url: "https://eps.leeds.ac.uk"
+        title: "Faculty of Engineering and Physical Sciences"
+      - url: "https://environment.leeds.ac.uk/"
+        title: "Faculty of Environment"
+      - url: "https://medicinehealth.leeds.ac.uk/"
+        title: "Faculty of Medicine and Health"
+      - url: "https://essl.leeds.ac.uk/"
+        title: "Faculty of Social ciences"
+      - url: "https://www.leeds.ac.uk/lifelong-learning"
+        title: "Lifelong Learning Centre<"
+      - url: "https://www.leeds.ac.uk/language-centre"
+        title: "Language Centre"
+  - title: "Alumni"
+    items:
+      - url: "https://www.leeds.ac.uk/alumni"
+        title: "Alumni website"
 
 # The Main Menu placed under the black header
 # This menu must only be nested one level deep. Items on the nested level can
