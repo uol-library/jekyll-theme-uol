@@ -14,6 +14,7 @@ window.addEventListener('load', (event) => {
 			return;
 		}
 		uol_show_loader(resultsContainer);
+		var searchIndexURL = resultsContainer.getAttribute( 'data-searchindex' );
 		new Promise((resolve,reject) => {
 			if ( storageAvailable('localStorage') && localStorage.getItem('searchIndex') ) {
 				console.log("getting data from localstorage");
@@ -21,7 +22,6 @@ window.addEventListener('load', (event) => {
 				localStorage.removeItem('searchIndex');
 			} else {
 				console.log("getting data from API");
-				var searchIndexURL = window.location.protocol+'//'+window.location.host+'/search.json';
 				console.log(searchIndexURL);
 				fetch(searchIndexURL)
 					.then(response => {
