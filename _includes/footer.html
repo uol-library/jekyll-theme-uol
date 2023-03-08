@@ -39,7 +39,7 @@
           <nav class="footer-site-information" aria-label="Site information">
             <h2 class="hide-accessible">Site information</h2>
             <ul class="footer-site-information__list">
-              <li class="footer-site-information__item">&copy; 2021 University of Leeds</li>
+              <li class="footer-site-information__item">&copy; {{ site.time | date: '%Y' }} University of Leeds</li>
               {% assign hasfooterinfo = footerinformation | size %}
               {% if hasfooterinfo > 0 %}
                 {% for link in footerinformation %}

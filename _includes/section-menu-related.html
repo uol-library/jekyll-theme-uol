@@ -1,21 +1,21 @@
 {% assign prel = page.related.items | size %}
 {% assign drel = site.data[page.datafile].related.items | size %}
 {% assign srel = site.data.navigation.related[page.related].items | size %}
-{% if page.related and prel > 0 %}
+{% if page.related && prel > 0 %}
   {% assign rel = page.related %}
-{% elsif site.data[page.datafile].related and drel > 0 %}
+{% elsif site.data[page.datafile].related && drel > 0 %}
   {% assign rel = site.data[page.datafile].related %}
-{% elsif site.data.navigation.related[page.related] and srel > 0 %}
+{% elsif site.data.navigation.related[page.related] && srel > 0 %}
   {% assign rel = site.data.navigation.related[page.related] %}
 {% endif %}
-{% if rel and rel.title != "" %}
+{% if rel && rel.title != "" %}
 <div class="uol-section-nav-related-content">
     <h2 class="uol-section-nav-related-content__title">{{ rel.title }}</h2>
     <div class="uol-section-nav-related-content__list">
     {% for item in rel.items %}
         <div class="uol-section-nav-related__item">
             <h3 class="uol-section-nav-related-content__item__title">
-            {% if item.link and item.link != "" %}
+            {% if item.link && item.link != "" %}
                 <a class="uol-section-nav-related-content__item__title__link" href="{{ item.link | absolute_url }}">{{ item.title }}</a>
             {% else %}
                 {{ item.title }}
