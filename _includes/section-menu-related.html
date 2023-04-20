@@ -9,7 +9,7 @@
   {% assign rel = site.data.navigation.related[page.related] %}
 {% endif %}
 {% if rel && rel.title != "" %}
-<div class="uol-section-nav-related-content">
+<aside class="uol-content-switch-from-side-to-main uol-section-nav-related-content" aria-label="Related content">
     <h2 class="uol-section-nav-related-content__title">{{ rel.title }}</h2>
     <div class="uol-section-nav-related-content__list">
     {% for item in rel.items %}
@@ -35,5 +35,5 @@
         </div>
     {% endfor %}
     </div>
-</div>
+</aside>
 {% endif %}
