@@ -9,12 +9,12 @@
   {% assign ctas = site.data.navigation.sectionctas[page.sectionctas] %}
 {% endif %}
 {% if ctas and ctas.title != "" %}
-<div class="uol-section-nav-ctas">
+<aside class="uol-section-nav-ctas" aria-label="Related links">
     <h3 class="uol-section-nav-ctas__title">{{ ctas.title | escape }}</h3>
     <div class="uol-section-nav-ctas__links">
     {% for cta in ctas.items %}
         <a class="uol-button uol-section-nav-ctas__link" href="{{ cta.url | absolute_url }}">{{ cta.title | escape }}</a>
     {% endfor %}
     </div>
-</div>
+</aside>
 {% endif %}
