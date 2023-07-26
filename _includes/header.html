@@ -1,5 +1,5 @@
     <div class="uol-header">
-      <header class="uol-global-masthead-outer">
+      <header class="uol-global-masthead-outer uol-global-masthead-outer--with-local-navigation">
         <div class="uol-global-masthead uol-content-container">
           <div class="uol-global-masthead__inner">
             <a class="uol-skip-link" href="#main">Skip to main content</a>
@@ -26,7 +26,7 @@
 
       <div class="uol-header-local-masthead">
         <div class="uol-header-local-masthead-inner">
-          <a class="uol-header-local-masthead__link" href="{{ "/" | absolute_url }}" {% if page.url == "/" %}aria-current="true"{% endif %}>
+          <a class="uol-header-local-masthead__link  uol-header-local-masthead__link--title" href="{{ "/" | absolute_url }}" {% if page.url == "/" %}aria-current="true"{% endif %}>
             {{ site.title }}
             <span class="hide-accessible">homepage</span>
           </a>
