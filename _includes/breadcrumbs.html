@@ -4,14 +4,14 @@
     <nav aria-label="Breadcrumb" class="uol-breadcrumb">
       <ol class="uol-breadcrumb__list">
         <li class="uol-breadcrumb__item">
-          <a class="uol-breadcrumb__link" href="{{ site.baseurl }}">Home</a>
+          <a class="uol-breadcrumb__link" href="{{ site.url }}{{ site.baseurl }}">Home</a>
         </li>
   {% for crumb in crumbs offset: 1 %}
     {% if forloop.last %}
         <li class="uol-breadcrumb__item">{{ page.title }}</li>
     {% else %}
         <li class="uol-breadcrumb__item">
-          <a class="uol-breadcrumb__link" href="{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+          <a class="uol-breadcrumb__link" href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
         </li>
     {% endif %}
   {% endfor %}
