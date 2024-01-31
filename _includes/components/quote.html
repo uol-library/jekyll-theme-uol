@@ -1,6 +1,6 @@
 {% assign type = include.type | default: "block" %}
 {% if type == "pull" %}
-  {% assign align = include.align | default: "right" %}
+  {% assign align = include.align | default: "left" %}
 <div aria-hidden="true" class="uol-typography-pull-quote uol-typography-pull-quote--{{ align | escape }}">
     <p>{{ include.content | strip_html }}</p>
 </div>

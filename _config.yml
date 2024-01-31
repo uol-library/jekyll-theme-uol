@@ -6,7 +6,11 @@
 #  /___/_/\__/\__/ /___/\__/\__/\__/_/_//_/\_, /___/
 #                                         /___/
 #
+<<<<<<< HEAD
 theme: 
+=======
+theme: jekyll-theme-uol
+>>>>>>> develop
 title: Site title
 author:
   name: peteredwards
@@ -16,7 +20,11 @@ description: >
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
+<<<<<<< HEAD
 google_analytics: "GTM-WJPZM2T" # set to Google Tag manager ID
+=======
+google_analytics: "" # set to Google Tag manager ID
+>>>>>>> develop
 
 # contact information
 contact:
@@ -58,3 +66,11 @@ permalink: pretty
 exclude:
   - README.md
   - LICENSE
+<<<<<<< HEAD
+=======
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-paginate
+>>>>>>> develop
