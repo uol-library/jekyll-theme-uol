@@ -6,18 +6,20 @@
 
 {% assign item = include.content %}
 {% if item.title != "" and item.content != "" %}
-<div class="uol-widget-container">
+<div class="uol-widget-container uol-widget-container__content">
     <div class="uol-widget uol-widget--content">
-        <div class="uol-widget__head">
-            <h2 class="uol-widget__title">{{ item.title }}</h2>
-            {% if item.lead != "" %}
-            <div class="uol-widget__lead">
-                {{ item.lead | markdownify }}
+        <div class="uol-widget__left-col">
+            <div class="uol-widget__head">
+                <h2 class="uol-widget__title">{{ item.title }}</h2>
+                {% if item.lead != "" %}
+                <div class="uol-widget__lead">
+                    {{ item.lead | markdownify }}
+                </div>
+                {% endif %}
             </div>
-            {% endif %}
         </div>
         <div class="uol-widget__content">
-            <div class="uol-rich-text">
+            <div class="uol-rich-text uol-spacing">
                 {{ item.content | markdownify }}
             </div>
         </div>

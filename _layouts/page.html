@@ -4,14 +4,14 @@ layout: default
 
 {% include components/banner.html %}
 {% include section-menu.html %}
-  <main id="main" class="uol-content-container">
+  <div class="uol-content-container uol-main-container">
     {% include breadcrumbs.html %}
-    <div class="uol-col-container">
+    <div class="uol-col-container uol-page-container">
       <div class="uol-side-nav-container"></div>
-      <div class="uol-page">
+      <main id="main" tabindex="-1" class="uol-page">
         <div class="uol-page__head">
           <header class="page-heading">
-            <h1 class="page-heading__title">{{ page.title }}</h1>
+            <h1 class="page-heading__title"><span class="page-heading__title__main">{{ page.title }}</span></h1>
           </header>
         </div>
         <div class="uol-page__content">
@@ -28,9 +28,9 @@ layout: default
             {{ content | markdownify }}
           </div>
         </div>
-      </div>
+      </main>
     </div>
 
     {% include section-menu-ctas.html %}
 
-  </main>
+  </div>
