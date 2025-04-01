@@ -11,11 +11,11 @@ layout: default
 {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
 
 {% include blog-menu.html %}
-  <main id="main" class="uol-content-container">
+  <div class="uol-content-container uol-main-container">
     {% include breadcrumbs.html %}
-    <div class="uol-col-container">
+    <div class="uol-col-container uol-page-container">
       <div class="uol-side-nav-container"></div>
-      <div class="uol-page">
+      <main id="main" tabindex="-1" class="uol-page">
         <div class="uol-page__head">
           <header class="page-heading">
             <h1 class="page-heading__title">{{ page.title }}</h1>
@@ -31,7 +31,7 @@ layout: default
           {% include pagination.html %}
           {% endif %}
         </div>
-      </div>
+      </main>
     </div>
 
     {% include blog-menu-ctas.html %}

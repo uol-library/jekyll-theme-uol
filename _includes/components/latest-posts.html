@@ -4,21 +4,23 @@
 {% assign np = site.posts | size %}
 {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
 {% if np > 0 %}
-<div class="uol-widget-container">
+<div class="uol-widget-container uol-widget-container__news-events">
     <div class="uol-widget uol-widget--news-events">
         {% if include.content.title or include.content.lead or include.content.link %}
-        <div class="uol-widget__head">
-            {% if include.content.title %}
-            <h2 class="uol-widget__title">{{ include.content.title }}</h2>
-            {% endif %}
-            {% if include.content.lead %}
-            <div class="uol-widget__lead">
-                <p>{{ include.content.lead | strip_html }}</p>
-            </div>
-            {% endif %}
-            {% if include.content.showlink %}
-            <a class="uol-widget__link" href="{{ "/blog/" | absolute_url }}">View all posts</a>
-            {% endif %}
+        <div class="uol-widget__left-col">
+          <div class="uol-widget__head">
+              {% if include.content.title %}
+              <h2 class="uol-widget__title">{{ include.content.title }}</h2>
+              {% endif %}
+              {% if include.content.lead %}
+              <div class="uol-widget__lead">
+                  <p>{{ include.content.lead | strip_html }}</p>
+              </div>
+              {% endif %}
+              {% if include.content.showlink %}
+              <a class="uol-widget__link" href="{{ "/blog/" | absolute_url }}">View all posts</a>
+              {% endif %}
+          </div>
         </div>
         {% endif %}
         {% if np < include.content.number %}
