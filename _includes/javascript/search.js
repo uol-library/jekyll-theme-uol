@@ -94,26 +94,16 @@ var renderResults = function( results ) {
 	rc.classList.add('uol-results-items');
 	for( var i = startIndex; i < ( startIndex + perPage ); i++ ) {
 		if ( i < results.length ) {
+			// article
 			var a = document.createElement('article');
 			a.classList.add('uol-results-items__item');
+			// wrapper
+			var w = document.createElement('div');
+			w.classList.add('uol-results-items__item__content-wrapper');
 			if ( results[i].alt != '' ) {
-				a.classList.add('uol-results-items__item--has-image');
+				w.classList.add('uol-results-items__item__has-image');
 			}
-			// container
-			var c = document.createElement('div');
-			c.classList.add('uol-results-items__item__text-container');
-			// title
-			var t = document.createElement('h2');
-			t.classList.add('uol-results-items__item__title');
-			var tl = document.createElement('a');
-			tl.setAttribute('href', results[i].url);
-			tl.classList.add('uol-results-items__item__link');
-			c.appendChild( t ).appendChild( tl ).appendChild( document.createTextNode( results[i].t ) );
-			// description
-			var d = document.createElement('p');
-			d.classList.add('uol-results-items__item__summary');
-			var desc = ( results[i].desc == ''? results[i].intro: results[i].desc );
-			a.appendChild( c ).appendChild( d ).appendChild( document.createTextNode( desc ) );
+			// image container
 			if ( results[i].alt != '' ) {
 				var imc = document.createElement( 'div' );
 				imc.classList.add( 'uol-results-items__item__image-container' );
@@ -122,8 +112,26 @@ var renderResults = function( results ) {
 				im.setAttribute( 'src', results[i].img );
 				im.setAttribute( 'alt', results[i].alt );
 				imc.appendChild( im );
-				a.appendChild( imc );
+				w.appendChild( imc );
 			}
+			// text container
+			var c = document.createElement('div');
+			c.classList.add('uol-results-items__item__text-container');
+			ci = document.createElement('div');
+			ci.classList.add('uol-results-items__item__text-container__inner');
+			// title
+			var t = document.createElement('h2');
+			t.classList.add('uol-results-items__item__title');
+			var tl = document.createElement('a');
+			tl.setAttribute('href', results[i].url);
+			tl.classList.add('uol-results-items__item__link');
+			ci.appendChild( t ).appendChild( tl ).appendChild( document.createTextNode( results[i].t ) );
+			// description
+			var d = document.createElement('p');
+			d.classList.add('uol-results-items__item__summary');
+			var desc = ( results[i].desc == ''? results[i].intro: results[i].desc );
+			ci.appendChild( d ).appendChild( document.createTextNode( desc ) );
+			a.appendChild( w ).appendChild( c ).appendChild( ci );
 			rc.appendChild( a );
 		}
 	}
