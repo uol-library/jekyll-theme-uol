@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="261" height="261"><svg id="SvgjsSvg1001" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261 261">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="261" height="261"></rect>
+  <polygon points="157 83.3 161.2 83.3 161.2 79.5 154.4 79.5 154.4 90.9 157 90.9 157 83.3"></polygon>
+  <polygon points="162.4 168.3 167 168.3 167 126.7 177.2 126.7 177.2 119.1 162.4 119.1 162.4 168.3"></polygon>
+  <polygon points="142 168.3 146.6 168.3 146.6 126.7 156.8 126.7 156.8 119.1 142 119.1 142 168.3"></polygon>
+  <path d="M184.2,206.2c0-8.4-6.6-14.2-14.4-14.2s-14.4,5.8-14.4,14.2,6.6,14.2,14.4,14.2,14.4-5.8,14.4-14.2ZM160.8,206.2c0-5.4,4.2-9,9-9s9,3.6,9,9-4.2,9-9,9-9-3.6-9-9Z"></path>
+  <polygon points="169 83.3 173.2 83.3 173.2 79.5 166.4 79.5 166.4 90.9 169 90.9 169 83.3"></polygon>
+  <polygon points="181 83.3 185.2 83.3 185.2 79.5 178.4 79.5 178.4 90.9 181 90.9 181 83.3"></polygon>
+  <polygon points="182.8 168.3 187.4 168.3 187.4 126.7 197.6 126.7 197.6 119.1 182.8 119.1 182.8 168.3"></polygon>
+  <path d="M0,0v261h114.2v-69.1h27.8v69.1h4.6v-77.7h46.4v77.7h4.6v-69.1h27.8v69.1h35.6V0H0ZM169.6,30h.4l26.8,16.4h-54s26.8-16.4,26.8-16.4ZM142.4,49.6h54.8l2.8,19.7h-60.4l2.8-19.7h0ZM219.6,187.3h-22v-8.6h-55.6v8.6h-22v-19.2h3.8v-62.8h6v-32.6h80v32.6h6v62.8h3.8v19.2Z"></path>
+  <polygon points="137.2 112.1 202.4 112.1 205.2 107.9 134.4 107.9 137.2 112.1"></polygon>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

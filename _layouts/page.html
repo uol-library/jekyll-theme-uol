@@ -20,11 +20,12 @@ layout: default
                 <img class="uol-featured-image__img" src="{{ page.imageurl | absolute_url }}" alt="{{ page.imagealt | escape }}">
             </figure>
             {% endif %}
-            <div class="uol-rich-text{% if page.lead %} uol-rich-text--with-lead{% endif %}">
+            <div class="uol-rich-text{% if page.lead %} uol-rich-text--with-lead{% endif %} uol-spacing">
             {% if page.lead %}
                 <p>{{ page.lead | strip_html }}</p>
             {% endif %}
             {{ content | markdownify }}
+            </div>
         </div>
       </main>
     </div>
