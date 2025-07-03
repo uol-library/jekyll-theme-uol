@@ -92,22 +92,20 @@ var renderResults = function( results ) {
 	// make a container for the results
 	var rc = document.createElement('div');
 	rc.classList.add('uol-results-items');
-	for( var i = startIndex; i < ( startIndex + perPage ); i++ ) {
+	for( let i = startIndex; i < ( startIndex + perPage ); i++ ) {
 		if ( i < results.length ) {
 			// article
-			var a = document.createElement('article');
+			let a = document.createElement('article');
 			a.classList.add('uol-results-items__item');
 			// wrapper
-			var w = document.createElement('div');
+			let w = document.createElement('div');
 			w.classList.add('uol-results-items__item__content-wrapper');
-			if ( results[i].alt != '' ) {
-				w.classList.add('uol-results-items__item__has-image');
-			}
 			// image container
 			if ( results[i].alt != '' ) {
-				var imc = document.createElement( 'div' );
+				w.classList.add('uol-results-items__item__has-image');
+				let imc = document.createElement( 'div' );
 				imc.classList.add( 'uol-results-items__item__image-container' );
-				var im = document.createElement( 'img' );
+				let im = document.createElement( 'img' );
 				im.classList.add( 'uol-results-items__item__img' );
 				im.setAttribute( 'src', results[i].img );
 				im.setAttribute( 'alt', results[i].alt );
@@ -115,22 +113,23 @@ var renderResults = function( results ) {
 				w.appendChild( imc );
 			}
 			// text container
-			var c = document.createElement('div');
+			let c = document.createElement('div');
 			c.classList.add('uol-results-items__item__text-container');
 			ci = document.createElement('div');
 			ci.classList.add('uol-results-items__item__text-container__inner');
 			// title
-			var t = document.createElement('h2');
+			let t = document.createElement('h2');
 			t.classList.add('uol-results-items__item__title');
-			var tl = document.createElement('a');
+			let tl = document.createElement('a');
 			tl.setAttribute('href', results[i].url);
 			tl.classList.add('uol-results-items__item__link');
 			ci.appendChild( t ).appendChild( tl ).appendChild( document.createTextNode( results[i].t ) );
 			// description
-			var d = document.createElement('p');
+			let d = document.createElement('p');
 			d.classList.add('uol-results-items__item__summary');
-			var desc = ( results[i].desc == ''? results[i].intro: results[i].desc );
+			let desc = ( results[i].desc == ''? results[i].intro: results[i].desc );
 			ci.appendChild( d ).appendChild( document.createTextNode( desc ) );
+			// append the text container
 			a.appendChild( w ).appendChild( c ).appendChild( ci );
 			rc.appendChild( a );
 		}
