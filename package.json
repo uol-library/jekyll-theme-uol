@@ -1,0 +1,21 @@
+{
+  "name": "jekyll-theme-uol",
+  "version": "0.0.7",
+  "description": "Jekyll theme based on the University of Leeds Design System",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node _scripts/minify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uol-library/jekyll-theme-uol.git"
+  },
+  "author": "Peter Edwards <p.l.edwards@leeds.ac.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "sass": "^1.86.1",
+    "uglify-js": "^3.19.3"
+  }
+}

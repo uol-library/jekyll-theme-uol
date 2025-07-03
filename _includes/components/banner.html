@@ -17,14 +17,13 @@
 {% endif %}
 {% assign nb = bnr | size %}
 {% if nb > 0 %}
-  <div class="uol-banner-outer">
+  <section aria-label="Featured" class="uol-banner-outer">
     {% if nb == 1 %}
     <div class="uol-banner-container">
     {% else %}
     <div class="uol-banner-container uol-banner-container--multiple">
     {% endif %}
-      <h2 class="hide-accessible">Featured</h2>
-      {% if nb > 1 %}
+    {% if nb > 1 %}
       <ol tabindex="0" class="uol-banner uol-banner--multiple">
         {% for item in bnr %}
         <li class="uol-banner__item">
@@ -32,7 +31,7 @@
         </li>
         {% endfor %}
       </ol>
-      {% else %}
+    {% else %}
       <div tabindex="0" class="uol-banner ">
         {% for item in bnr %}
         <div class="uol-banner__item">
@@ -40,7 +39,7 @@
         </div>
         {% endfor %}
       </div>
-      {% endif %}
+    {% endif %}
     </div>
-  </div>
+  </section>
 {% endif %}

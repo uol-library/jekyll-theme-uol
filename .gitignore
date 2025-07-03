@@ -10,3 +10,5 @@ Gemfile.lock
 
 # Gems
 *.gem
+
+node_modules

@@ -6,13 +6,15 @@
 
 {% assign item = include.content %}
 {% if item.title != "" and item.content != "" %}
-<div class="uol-widget-container">
+<div class="uol-widget-container uol-widget-container__featured-content">
     <div class="uol-widget uol-widget--featured-content">
-        <div class="uol-widget__head">
-            <h2 class="uol-widget__title">{{ item.title | escape }}</h2>
-            {% if item.lead && item.lead != "" %}
-            <div class="uol-widget__lead"><p>{{ item.lead | strip_html }}</p></div>
-            {% endif %}
+        <div class="uol-widget__left-col">
+            <div class="uol-widget__head">
+                <h2 class="uol-widget__title">{{ item.title | escape }}</h2>
+                {% if item.lead && item.lead != "" %}
+                <div class="uol-widget__lead"><p>{{ item.lead | strip_html }}</p></div>
+                {% endif %}
+            </div>
         </div>
         <div class="uol-widget__content">
             {% if item.image && item.image.alt && item.image.alt != "" && item.image.url && item.image.url != "" %}

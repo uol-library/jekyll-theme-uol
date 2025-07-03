@@ -4,13 +4,11 @@ layout: default
 {% include section-menu.html %}
 
 {% include components/banner.html %}
-
-  <main id="main" class="uol-content-container">
-    <h1 class="hide-accessible">{{ page.title }}</h1>
-    {% include breadcrumbs.html %}
-    <div class="uol-homepage-content-container">
+  <div class="uol-content-container uol-main-container">
+    <div class="uol-col-container uol-page-container">
       <div class="uol-side-nav-container"></div>
-      <div class="uol-homepage-content">
+      <main id="main" tabindex="-1" class="uol-homepage-content">
+        <h1 class="hide-accessible">{{ page.title }}</h1>
           {% include components/inline-ctas.html %}
           {% if page.widgets %}
             {% assign pagewidgets = page.widgets %}

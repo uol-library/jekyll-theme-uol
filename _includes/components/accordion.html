@@ -10,13 +10,15 @@
 {% if na > 0 %}
   {% for item in accordion %}
     {% if item.title != "" and item.content != "" %}
-<div class="uol-accordion{% if item.class != "" %} {{ item.class | escape }}{% endif %}">
+<div class="uol-accordion uol-rich-text{% if item.class != "" %} {{ item.class | escape }}{% endif %}">
     <h2 class="uol-accordion__title">
         {{ item.title }}
     </h2>
     <div class="uol-accordion__content">
-        <div class="uol-rich-text">
-            {{ item.content | markdownify }}
+        <div class="uol-accordion__content-inner">
+            <div class="uol-rich-text">
+                {{ item.content | markdownify }}
+            </div>
         </div>
     </div>
 </div>
