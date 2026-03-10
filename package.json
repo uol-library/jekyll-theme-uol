@@ -15,7 +15,7 @@
   "devDependencies": {
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
-    "sass": "^1.86.1",
+    "sass": "^1.97.3",
     "uglify-js": "^3.19.3"
   }
 }
