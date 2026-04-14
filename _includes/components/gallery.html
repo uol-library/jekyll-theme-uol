@@ -1,0 +1,53 @@
+{% comment %}
+*
+*   Gallery widget
+*
+{% endcomment %}
+
+{% assign itemno = include.content.items | size %}
+{% if itemno > 0 %}
+<section class="uol-gallery-container" aria-label="Gallery of {{ itemno }} items">
+    <div class="uol-gallery uol-gallery--count-{{ itemno }}">
+        {% for item in include.content.items %}
+            {% if item.type == 'image' %}
+                <div class="uol-gallery__item  uol-gallery__item--image ">
+                    <h2 class="uol-gallery__item__title">{{ item.title }}</h2>
+                    <figure class="uol-gallery__figure">
+                        <div class="uol-gallery__image-container">
+                            <img src="{{ item.imageurl | absolute_url }}" alt="{{ item.imagealt | escape }}" data-src-high-quality="{{ item.imageurlhighquality | absolute_url }}">
+                        </div>
+
+                    </figure>
+
+                    <div class="uol-gallery__item__content">
+                        {{ item.content | markdownify }}
+                    </div>
+
+                </div>
+            {% elsif item.type == 'video' %}
+                <div class="uol-gallery__item uol-gallery__item--video  " data-video="{{ item.videourl }}">
+                    <h2 class="uol-gallery__item__title">{{ item.title }}</h2>
+                    <figure class="uol-gallery__figure">
+                        <div class="uol-gallery__image-container">
+                            <img src="#" alt="">
+                        </div>
+
+                        <figcaption class="uol-gallery__image-caption">{{ item.title }}</figcaption>
+
+                    </figure>
+
+                    <noscript>
+                        <a href="{{ item.videourl }}">{{ item.videourl }}</a>
+                    </noscript>
+
+                    <div class="uol-gallery__item__content">
+                        {{ item.content | markdownify }}
+                    </div>
+
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+        
